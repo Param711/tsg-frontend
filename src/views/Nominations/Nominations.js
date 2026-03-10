@@ -40,7 +40,7 @@ export default function Nominations() {
         </Typography>
 
         <Box className={Styles.electionBody}>
-          <Typography className={Styles.notice}>
+          <Typography component="div" className={Styles.notice}>
             <Box className={Styles.buttonGroup}>
               {Object.keys(tabFormUrls).map((tab, index) => (
                 <Button key={index} onClick={() => handleTabChange(tab)}>

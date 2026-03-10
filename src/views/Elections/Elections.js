@@ -62,7 +62,7 @@ export default function Elections() {
                   </a>
                   </Button>
                 </Typography> */}
-            <Typography className={Styles.notice}>
+            <Typography component="div" className={Styles.notice}>
               <div className={Styles.noticeDescription}>
                 Elections 2025-2026 Results
               </div>
@@ -77,7 +77,7 @@ export default function Elections() {
                 </a>
               </Button>
             </Typography>
-            <Typography className={Styles.notice}>
+            <Typography component="div" className={Styles.notice}>
               <div className={Styles.noticeDescription}>
                 Advisory for TSG Elections 2025-26
               </div>
@@ -92,7 +92,7 @@ export default function Elections() {
                 </a>
               </Button>
             </Typography>
-            <Typography className={Styles.notice}>
+            <Typography component="div" className={Styles.notice}>
               <div className={Styles.noticeDescription}>
                 SOAPBOX SCHEDULE 2025-26
               </div>
@@ -107,7 +107,7 @@ export default function Elections() {
                 </a>
               </Button>
             </Typography>
-            {/* <Typography className={Styles.notice}>
+            {/* <Typography component="div" className={Styles.notice}>
               <div className={Styles.noticeDescription}>
               Final List of Candidates for TSG Election (2023-24)
               </div>
@@ -122,19 +122,19 @@ export default function Elections() {
               </a>
               </Button>
             </Typography> */}
-            {/* <Typography className={Styles.notice}>
+            {/* <Typography component="div" className={Styles.notice}>
               <div className={Styles.noticeDescription}>
                 <strong className="text-danger">The Deadline to get approval from the faculty members for the Gymkhana Elections for the Academic Year (2023 - 2024) has been extended to 24th March 2023, 11:59 PM</strong>
               </div>
             </Typography> */}
-            {/* <Typography className={Styles.notice}>
+            {/* <Typography component="div" className={Styles.notice}>
               <div className={Styles.noticeDescription}>
               The Venue for the TSG Election (2024 - 2025) will be Computer &
               Informatics Center (CIC), Takshashila, Srinivasa Ramanujan
               Complex, IIT Kharagpur
               </div>
             </Typography> */}
-            <Typography className={Styles.notice}>
+            <Typography component="div" className={Styles.notice}>
               <div className={Styles.noticeDescription}>
                 Final Proposals of Candidates
               </div>
@@ -144,7 +144,7 @@ export default function Elections() {
                 </a>
               </Button>
             </Typography>
-            <Typography className={Styles.notice}>
+            <Typography component="div" className={Styles.notice}>
               <div className={Styles.noticeDescription}>
                 Final List of Nominations for TSG Election (2025-26)
               </div>
@@ -159,7 +159,7 @@ export default function Elections() {
                 </a>
               </Button>
             </Typography>
-            <Typography className={Styles.notice}>
+            <Typography component="div" className={Styles.notice}>
               <div className={Styles.noticeDescription}>
                 TSG Election (2025-2026) Notification
               </div>
@@ -174,7 +174,7 @@ export default function Elections() {
                 </a>
               </Button>
             </Typography>
-            <Typography className={Styles.notice}>
+            <Typography component="div" className={Styles.notice}>
               <div className={Styles.noticeDescription}>
                 Election Officer (2025 - 2026)
               </div>

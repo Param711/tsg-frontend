@@ -20,7 +20,7 @@
   padding-bottom: 1rem;
 }
 
-.footerLine{
+.footerLine {
   width: 70%;
   background-color: transparent;
   border-bottom: 1px solid white;
@@ -36,11 +36,15 @@
   width: 32.5%;
   border-right: 3px dashed grey;
 }
+
 .imgContainer {
   height: 40%;
   margin-bottom: 0.5rem;
+  overflow: hidden;
 }
 .imgContainer img {
+  height: 100%;
+  width: auto;
   object-fit: cover;
 }
 .tsgContainer .tsgDescription {
@@ -54,6 +58,7 @@
   font-size: 1rem;
   margin-bottom: 1rem;
 }
+
 .iconsContainer {
   width: 100%;
   display: flex;
@@ -61,15 +66,18 @@
   padding: 0rem 20%;
   justify-content: space-around;
 }
+
 .iconsContainer a {
   color: #fff;
   font-size: 1.5rem;
   margin: 0.25rem;
 }
+
 .iconsContainer a:hover {
   transition: ease-out 0.5s;
   color: #f1c40f;
 }
+
 .linksContainer {
   flex-grow: 2;
   padding: 0rem;
@@ -80,7 +88,7 @@
   border-right: 3px dashed grey;
 }
 
-.linksContainer p{
+.linksContainer p {
   text-align: center;
   border-bottom: 1.5px dotted grey;
   padding: 0.5rem 0rem;
@@ -88,7 +96,7 @@
   position: relative;
 }
 
-.linksContainer p span{
+.linksContainer p span {
   visibility: hidden;
   width: 7.5rem;
   background-color: grey;
@@ -104,7 +112,7 @@
   right: 85%;
 }
 
-.linksContainer p:hover span{
+.linksContainer p:hover span {
   visibility: visible;
 }
 
@@ -114,10 +122,12 @@
   text-decoration: none;
   text-transform: capitalize;
 }
+
 .linksContainer p a:hover {
   color: #f1c40f;
   font-weight: 500;
 }
+
 .contactSection {
   padding-left: 3rem;
   width: 32.5%;
@@ -127,15 +137,18 @@
   text-align: center;
   font-weight: 700;
 }
+
 .contactSection span:first-of-type {
   font-size: 2.5rem;
   color: #fff;
 }
+
 .contactSection span:last-of-type {
   font-size: 2rem;
   color: #f1c40f;
   margin-bottom: 1rem;
 }
+
 .contactButton {
   width: 50%;
   color: white;
@@ -160,11 +173,12 @@
   background-size: 400%;
   transition: background 300ms ease-in-out;
 }
+
 .contactButton:hover {
   background-position: 0;
 }
 
-.copyright{
+.copyright {
   text-align: center;
   color: white;
   margin: 1rem auto;
@@ -172,54 +186,60 @@
   padding-bottom: 15px;
 }
 
-.copyright a{
+.copyright a {
   color: #f1c40f;
 }
 
-.copyright a:hover{
+.copyright a:hover {
   color: #f6d965;
 }
 
 @media screen and (min-width: 1460px) {
-  .linksContainer p{
+  .linksContainer p {
     font-size: 1.25rem;
   }
 }
 
-@media screen and (max-width : 768px){
+@media screen and (max-width : 768px) {
   .imgContainer {
     display: none;
   }
 }
 
-@media screen and (max-width: 1400px) { 
+@media screen and (max-width: 1400px) {
   .contactSection {
     padding-left: 0;
   }
 
   .footerContainer {
-    height: auto ;
+    height: auto;
     flex-direction: column;
   }
+
   .tsgContainer {
     width: 100%;
     border-right: none;
     border-bottom: 3px dashed grey;
   }
+
   .tsgContainer .tsgDescription .tsgHeading {
     text-align: center;
     font-size: 2rem;
   }
+
   .tsgContainer .tsgDescription .address {
     font-size: 1.25rem;
   }
+
   .iconsContainer {
     width: 60%;
     margin-bottom: 2rem;
   }
+
   .iconsContainer a {
     font-size: 1.5rem;
   }
+
   .linksContainer {
     border-bottom: 3px dashed grey;
     margin: 0 auto;
@@ -233,22 +253,24 @@
     text-transform: capitalize;
     font-size: 1rem;
   }
+
   .contactSection {
     margin-top: 1rem;
     width: 100%;
     flex-direction: column;
     text-align: center;
   }
+
   .contactButton {
     width: 40%;
     margin: auto;
   }
+
   .contactSection span:last-of-type {
     margin-bottom: 1rem;
   }
+
   .contactSection button {
     margin-bottom: 1rem;
   }
 }
-
-
