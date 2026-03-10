@@ -1,0 +1,33 @@
+:global(*) {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+:global(body) {
+  background-color: black;
+}
+.resultsSection {
+  display: flex;
+  width: 100%;
+}
+
+.content {
+  flex-grow: 1;
+  min-width: 80%;
+  max-width: 100%;
+}
+
+.content h2 {
+  color: white;
+}
+
+@media screen and (max-width: 768px) {
+  .resultsSection {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin: auto;
+    margin-top: 11vh;
+    min-height: 90vh;
+  }
+}

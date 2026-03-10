@@ -1,0 +1,49 @@
+:global(*) {
+  margin: 0;
+}
+.dropdownContainer {
+  position: relative;
+}
+.dropdownMenu {
+  width: auto;
+  position: fixed;
+  top: 8vh;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.5rem;
+  background-color: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(2rem);
+  box-shadow: 0 0rem 1rem 0 rgba(255, 255, 255, 0.2);
+  -webkit-backdrop-filter: blur(2rem);
+  border: 1px solid rgba(0, 0, 0, 0.18);
+}
+
+.dropdownMenu li {
+  margin: 0;
+  cursor: pointer;
+}
+.dropdownMenu li a {
+  color: white;
+}
+
+.dropdownMenu.clicked {
+  display: none;
+}
+
+.dropdownLink {
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  text-decoration: none;
+  color: black;
+  padding: 16px;
+}
+
+@media screen and (max-width: 960px) {
+  i {
+    display: none;
+  }
+}

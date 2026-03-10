@@ -1,0 +1,243 @@
+.bgContainer {
+  margin-top: 12vh;
+}
+
+.mainContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  width: 90%;
+  max-width: 1200px;
+  padding: 3rem 0;
+  color: white;
+}
+.categoryContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.eventSlider div img {
+  object-fit: contain;
+}
+.categoryHeading {
+  font-size: 2rem;
+  color: #f1c40f;
+  margin-bottom: 2rem;
+}
+.categoryHeading2 {
+  font-size: 2rem;
+  color: #f1c40f;
+  margin-bottom: 2rem;
+}
+.categoryHeading1 {
+  font-size: 2.2rem;
+  color: #f1c40f;
+  margin-bottom: -2%;
+  margin-top: 0%;
+  text-align: center;
+}
+.cardsWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 100%;
+  width: 100%;
+}
+/* Slider */
+.events {
+  margin: auto;
+}
+
+.carousel-caption-bottom {
+  font-size: 15px !important;
+  color: black !important;
+}
+.thumbnails img {
+  width: 10% !important;
+}
+
+@media screen and (max-width: 576px) {
+  .categoryHeading2 {
+    font-size: 2rem;
+    color: #f1c40f;
+    margin-bottom: 2rem;
+  }
+  .categoryContainer {
+    margin: 2rem 0;
+  }
+}
+
+.highlightsContainer {
+  display: flex;
+  flex-direction: column;
+  background-color: #2a2b2f;
+  border-radius: 10px;
+  border-color: #f1c40f;
+  border-style: solid;
+  border-width: 1px;
+}
+
+.highlightsContainer a {
+  color: #f1c40f;
+}
+
+.highlightsContainer a:hover {
+  color: #ffd633;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.highlightsContainerHeader {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 30px;
+  border-width: 0;
+  border-color: #f1c40f;
+  border-style: solid;
+  border-bottom-width: 1px;
+}
+
+.highlightsContainerHeader .timesIcon {
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.highlightsContainerMainHeading {
+  display: flex;
+  align-items: center;
+}
+
+.highlightsContainerMainHeading .bellIcon {
+  font-size: 24px;
+  margin-right: 10px;
+}
+
+.highlightsContainerMainHeading h1 {
+  font-size: 28px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.highlightsContainerBody {
+  padding: 2rem 4rem;
+}
+
+.scheduleTile {
+  padding: 1.5rem 0;
+  color: #fff;
+  align-self: stretch;
+}
+
+.details {
+  width: 100%;
+  max-width: 1300px;
+}
+
+.details > .summary {
+  padding: 8px;
+  padding-left: 2.2rem;
+  border: none;
+  cursor: pointer;
+  list-style-position: inside;
+  border-bottom: 2px solid #f1c40f;
+  position: relative;
+  display: block;
+  transition: all 0.3s;
+  font-family: var(--font1);
+}
+
+.details > div {
+  padding: 8px;
+  border-bottom: 2px solid #f1c40f;
+  line-height: 2rem;
+  font-family: var(--font2);
+  transition: 0.3s all ease;
+}
+
+.summary:before {
+  content: "";
+  border-width: 0.4rem;
+  border-style: solid;
+  border-color: transparent transparent transparent #f1c40f;
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  transform: rotate(0);
+  transform-origin: 0.2rem 50%;
+  transition: 0.3s transform ease;
+}
+
+.details .summary::-webkit-details-marker {
+  display: none;
+}
+
+.details[open] > .summary:before {
+  transform: rotate(90deg);
+}
+
+.details li {
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.details .liIcon {
+  margin: auto 10px;
+}
+
+.illuVideoSection {
+  display: flex;
+  justify-content: center;
+  margin: 0px auto;
+}
+
+.illuVideoSection .illuVideo {
+  min-height: 250px;
+}
+
+.inductionIntro .info {
+  padding: 50px;
+  border: 1px solid red;
+  border-radius: 8px;
+  max-width: 350px;
+  width: 80%;
+  margin: auto 20px;
+}
+
+@media (min-width: 700px) {
+  .illuVideoSection .illuVideo {
+    min-height: 500px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .inductionIntro .info {
+    padding: 20px;
+    border-radius: 8px;
+    width: 80%;
+    margin: 20px 20px;
+  }
+  .inductionIntro .info p {
+    font-size: 20px;
+  }
+}
+
+.inductionIntro {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.inductionIntro .handbookContainer iframe {
+  height: 450px;
+}
+
+.inductionIntro .handbookContainer {
+  text-align: center;
+}

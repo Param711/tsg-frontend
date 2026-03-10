@@ -1,0 +1,74 @@
+{
+    "Templates": [
+        {
+            "id": 0,
+            "src": "/data/media/certif-templates/template-00.png",
+            "alt": "Certificate 1",
+            "preview": "/data/media/certif-templates/excel-preview/preview-00.png",
+            "download_link": "/data/media/certif-templates/excel-preview/sample-files/template00.xlsx"
+        },
+        {
+            "id": 1,
+            "src": "/data/media/certif-templates/template-01.png",
+            "alt": "Certificate 2",
+            "preview": "/data/media/certif-templates/excel-preview/preview-01.png",
+            "download_link": "/data/media/certif-templates/excel-preview/sample-files/template01.xlsx"
+        },
+        {
+            "id": 2,
+            "src": "/data/media/certif-templates/template-02.png",
+            "alt": "Certificate 3",
+            "preview": "/data/media/certif-templates/excel-preview/preview-02.png",
+            "download_link": "/data/media/certif-templates/excel-preview/sample-files/template02.xlsx"
+        },
+        {
+            "id": 3,
+            "src": "/data/media/certif-templates/template-03.png",
+            "alt": "Certificate 4",
+            "preview": "/data/media/certif-templates/excel-preview/preview-03.png",
+            "download_link": "/data/media/certif-templates/excel-preview/sample-files/template03.xlsx"
+        },
+        {
+            "id": 4,
+            "src": "/data/media/certif-templates/template-04.png",
+            "alt": "Certificate 5",
+            "preview": "/data/media/certif-templates/excel-preview/preview-04.png",
+            "download_link": "/data/media/certif-templates/excel-preview/sample-files/template04.xlsx"
+        },
+        {
+            "id": 5,
+            "src": "/data/media/certif-templates/template-05.png",
+            "alt": "Certificate 6",
+            "preview": "/data/media/certif-templates/excel-preview/preview-05.png",
+            "download_link": "/data/media/certif-templates/excel-preview/sample-files/template05.xlsx"
+        },
+        {
+            "id": 6,
+            "src": "/data/media/certif-templates/template-06.png",
+            "alt": "Certificate 7",
+            "preview": "/data/media/certif-templates/excel-preview/preview-06.png",
+            "download_link": "/data/media/certif-templates/excel-preview/sample-files/template06.xlsx"
+        },
+        {
+            "id": 7,
+            "src": "/data/media/certif-templates/template-07.png",
+            "alt": "Certificate 8",
+            "preview": "/data/media/certif-templates/excel-preview/preview-07.png",
+            "download_link": "/data/media/certif-templates/excel-preview/sample-files/template07.xlsx"
+        },
+        {
+            "id": 8,
+            "src": "/data/media/certif-templates/template-08.png",
+            "alt": "Certificate 9",
+            "preview": "/data/media/certif-templates/excel-preview/preview-08.png",
+            "download_link": "/data/media/certif-templates/excel-preview/sample-files/template08.xlsx"
+        },
+        {
+            "id": 9,
+            "src": "/data/media/certif-templates/template-09.png",
+            "alt": "Certificate 10",
+            "preview": "/data/media/certif-templates/excel-preview/preview-09.png",
+            "download_link": "/data/media/certif-templates/excel-preview/sample-files/template09.xlsx"
+        }
+    ]
+}
