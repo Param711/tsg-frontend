@@ -1,5 +1,6 @@
 import Script from "next/script";
 import ClientProvider from "./ClientProvider";
+import "bootstrap/dist/css/bootstrap.min.css";
 import "../styles/global.css";
 import "../styles/components/yearDropdown.css";
 import "../styles/components/withTable.css";

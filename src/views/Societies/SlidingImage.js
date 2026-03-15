@@ -4,7 +4,7 @@ import AppImage from "../../components/AppImage";
 const SlidingImages = () => {
   // Array to simulate 10 images
   const images = Array(10).fill(
-    "https://lh6.googleusercontent.com/MPu7D_wVvgnO0Rgg0lxvkA1gdL61QQ1XgWL8EfNZcb4_q80W41DuyxGrEQDnTxqUpxaYZQoO7Kfc7yEMoWbb3UnIpiD4-oD-MrJg1w36ZTf7QudEPic7i2b84FOpW_e7DA=w1280"
+    "https://lh6.googleusercontent.com/MPu7D_wVvgnO0Rgg0lxvkA1gdL61QQ1XgWL8EfNZcb4_q80W41DuyxGrEQDnTxqUpxaYZQoO7Kfc7yEMoWbb3UnIpiD4-oD-MrJg1w36ZTf7QudEPic7i2b84FOpW_e7DA=w1280",
   );
 
   return (
@@ -27,7 +27,7 @@ const SlidingImages = () => {
               gap: "16px",
               color: "white",
               fontSize: "18px",
-              minWidth:"160px"
+              minWidth: "160px",
             }}
           >
             <AppImage
@@ -40,6 +40,8 @@ const SlidingImages = () => {
                 width: "128px",
                 objectFit: "contain",
               }}
+              width={128}
+              height={128}
             />
             <p>Governor</p>
           </div>

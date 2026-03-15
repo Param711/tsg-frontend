@@ -64,7 +64,7 @@ export default function AthleticsMatch(props) {
                                                             {val.team1_score}
                                                         </div>
                                                         <div className={Styles.scorers}>
-                                                            <AppImage src='/images/soccer-ball.png' alt="Err" />
+                                                            <AppImage src='/images/soccer-ball.png' alt="Err" width={20} height={20} />
                                                             {val.team1_goalscorers}
                                                         </div>
                                                     </div>
@@ -79,7 +79,7 @@ export default function AthleticsMatch(props) {
                                                             {val.team2_score}
                                                         </div>
                                                         <div className={Styles.scorers}>
-                                                            <AppImage src='/images/soccer-ball.png' alt="Err" />
+                                                            <AppImage src='/images/soccer-ball.png' alt="Err" width={20} height={20} />
                                                             {val.team2_goalscorers}
                                                         </div>
                                                     </div>
@@ -151,7 +151,7 @@ export default function AthleticsMatch(props) {
                                                             {val.team1_score}
                                                         </div>
                                                         <div className={Styles.scorers}>
-                                                            <AppImage src='/images/soccer-ball.png' alt="Err" />
+                                                            <AppImage src='/images/soccer-ball.png' alt="Err" width={20} height={20} />
                                                             {val.team1_goalscorers}
                                                         </div>
                                                     </div>
@@ -166,7 +166,7 @@ export default function AthleticsMatch(props) {
                                                             {val.team2_score}
                                                         </div>
                                                         <div className={Styles.scorers}>
-                                                            <AppImage src='/images/soccer-ball.png' alt="Err" />
+                                                            <AppImage src='/images/soccer-ball.png' alt="Err" width={20} height={20} />
                                                             {val.team2_goalscorers}
                                                         </div>
                                                     </div>

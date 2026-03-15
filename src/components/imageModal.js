@@ -17,7 +17,8 @@ export default function ImageModal(props) {
 
   return (
     <div className="image-container">
-      <AppImage alt=""
+      <AppImage
+        alt=""
         className="main-image"
         src={props.images}
         onClick={handleModalOpen}
@@ -25,11 +26,24 @@ export default function ImageModal(props) {
           e.target.onerror = null;
           e.target.src = "/awards/person-placeholder.png";
         }}
+        width={300}
+        height={300}
       />
 
-      <Modal isOpen={modalIsOpen} onRequestClose={handleModalClose} contentLabel="Image description">
+      <Modal
+        isOpen={modalIsOpen}
+        onRequestClose={handleModalClose}
+        contentLabel="Image description"
+      >
         <div className="modal-close-container">
-          <AppImage alt="" id="modal-close" src="/images/close.png" onClick={handleModalClose} />
+          <AppImage
+            alt=""
+            id="modal-close"
+            src="/images/close.png"
+            onClick={handleModalClose}
+            width={24}
+            height={24}
+          />
         </div>
         <h1> {props.title} </h1>
 
@@ -43,13 +57,16 @@ export default function ImageModal(props) {
           ></iframe>
         ) : (
           <>
-            <AppImage alt=""
+            <AppImage
+              alt=""
               className="modal-image"
               src={props.images}
               onError={(e) => {
                 e.target.onerror = null;
                 e.target.src = "/awards/person-placeholder.png";
               }}
+              width={600}
+              height={600}
             />
 
             {props.ProposalLink && (

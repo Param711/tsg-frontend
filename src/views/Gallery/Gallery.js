@@ -38,7 +38,7 @@ function Gallery() {
                         className="grid_imgs"
                         style={{ width: 350, height: 350 }}
                       >
-                        <AppImage src={img1} alt="..." className="myimg" />
+                        <AppImage src={img1} alt="..." className="myimg" width={350} height={350} />
                         <div className="layer">
                           <h3>Illumination</h3>
                         </div>
@@ -49,7 +49,7 @@ function Gallery() {
                         className="grid_imgs"
                         style={{ width: 350, height: 350 }}
                       >
-                        <AppImage src={img2} alt="..." className="myimg" />
+                        <AppImage src={img2} alt="..." className="myimg" width={350} height={350} />
                       </div>
                     </Col>
 
@@ -58,7 +58,7 @@ function Gallery() {
                         className="grid_imgs"
                         style={{ width: 350, height: 350 }}
                       >
-                        <AppImage src={img3} alt="..." className="myimg" />
+                        <AppImage src={img3} alt="..." className="myimg" width={350} height={350} />
                       </div>
                     </Col>
                     <Col style={{ width: 350 }}>
@@ -66,7 +66,7 @@ function Gallery() {
                         className="grid_imgs"
                         style={{ width: 350, height: 350 }}
                       >
-                        <AppImage src={img4} alt="..." className="myimg" />
+                        <AppImage src={img4} alt="..." className="myimg" width={350} height={350} />
                       </div>
                     </Col>
                   </Row>
@@ -76,7 +76,7 @@ function Gallery() {
                         className="grid_imgs"
                         style={{ width: 350, height: 350 }}
                       >
-                        <AppImage src={img5} alt="..." className="myimg" />
+                        <AppImage src={img5} alt="..." className="myimg" width={350} height={350} />
                       </div>
                     </Col>
 
@@ -85,7 +85,7 @@ function Gallery() {
                         className="grid_imgs"
                         style={{ width: 350, height: 350 }}
                       >
-                        <AppImage src={img6} alt="..." className="myimg" />
+                        <AppImage src={img6} alt="..." className="myimg" width={350} height={350} />
                       </div>
                     </Col>
                     <Col style={{ width: 350 }}>
@@ -93,7 +93,7 @@ function Gallery() {
                         className="grid_imgs"
                         style={{ width: 350, height: 350 }}
                       >
-                        <AppImage src={img3} alt="..." className="myimg" />
+                        <AppImage src={img3} alt="..." className="myimg" width={350} height={350} />
                       </div>
                     </Col>
                     <Col>
@@ -101,7 +101,7 @@ function Gallery() {
                         className="grid_imgs"
                         style={{ width: 350, height: 350 }}
                       >
-                        <AppImage src={img2} alt="..." className="myimg" />
+                        <AppImage src={img2} alt="..." className="myimg" width={350} height={350} />
                       </div>
                     </Col>
                   </Row>
@@ -111,7 +111,7 @@ function Gallery() {
                         className="grid_imgs"
                         style={{ width: 350, height: 350 }}
                       >
-                        <AppImage src={img1} alt="..." className="myimg" />
+                        <AppImage src={img1} alt="..." className="myimg" width={350} height={350} />
                       </div>
                     </Col>
                   </Row>

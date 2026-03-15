@@ -10,6 +10,8 @@ export default function Cards(props) {
           src={`/data/media/images/societies/${props.shortform}.png`}
           loading="lazy"
           className="image"
+          width={200}
+          height={200}
         />
       </div>
 

@@ -34,12 +34,12 @@ export default function Navbar() {
   const pathname = usePathname();
 
   const isActive = (href) => {
-    if (href === '/') return pathname === '/';
+    if (href === "/") return pathname === "/";
     return pathname.startsWith(href);
   };
 
   const linkStyle = (href) => ({
-    color: isActive(href) ? '#F1C40E' : undefined,
+    color: isActive(href) ? "#F1C40E" : undefined,
   });
   useEffect(() => {
     setNotification({ badgeContent: highlightEvents.length, click: false });
@@ -62,9 +62,14 @@ export default function Navbar() {
       <nav className={Styles.navbar}>
         {/* Navbar logo */}
         <div className={Styles.navLogo}>
-          <Link href='/' style={{ display: "flex", alignItems: "center" }}>
+          <Link href="/" style={{ display: "flex", alignItems: "center" }}>
             {" "}
-            <AppImage src='/data/media/images/general/gymkhanaLogo.png' alt='KGP_logo' />
+            <AppImage
+              src="/data/media/images/general/gymkhanaLogo.png"
+              alt="KGP_logo"
+              width={40}
+              height={40}
+            />
             <span>&nbsp;TSG</span>
           </Link>
         </div>
@@ -78,20 +83,20 @@ export default function Navbar() {
         <ul className={listClass}>
           {/* HOME */}
           <li className={Styles.navItem}>
-            <Link href='/' className={Styles.navLinks} style={linkStyle('/')}>
+            <Link href="/" className={Styles.navLinks} style={linkStyle("/")}>
               Home
             </Link>
           </li>
 
           <li className={Styles.navItem}>
-            <Link href='/societies' className={Styles.navLinks} style={linkStyle('/societies')}>
+            <Link href="/societies" className={Styles.navLinks} style={linkStyle("/societies")}>
               Societies
             </Link>
           </li>
 
           {/* EVENTS */}
           <li className={Styles.navItem}>
-            <Link href='/events' className={Styles.navLinks} style={linkStyle('/events')}>
+            <Link href="/events" className={Styles.navLinks} style={linkStyle("/events")}>
               Events
             </Link>
           </li>
@@ -99,7 +104,7 @@ export default function Navbar() {
           {/* BLOGS */}
           <li className={Styles.navItem}>
             {
-              <a href='https://tsgblog.iitkgp.ac.in/' target='_blank' rel='noreferrer'>
+              <a href="https://tsgblog.iitkgp.ac.in/" target="_blank" rel="noreferrer">
                 Blogs
               </a>
             }
@@ -107,7 +112,7 @@ export default function Navbar() {
 
           {/* AWARDS */}
           <li className={Styles.navItem}>
-            <Link href='/awards' className={Styles.navLinks} style={linkStyle('/awards')}>
+            <Link href="/awards" className={Styles.navLinks} style={linkStyle("/awards")}>
               Awards
             </Link>
           </li>
@@ -116,8 +121,9 @@ export default function Navbar() {
           <li
             className={`${Styles.navItem} ${Styles.results}`}
             onMouseEnter={() => setDropdown(true)}
-            onMouseLeave={() => setDropdown(false)}>
-            <Link href="#" className={Styles.navLinks} style={linkStyle('/results')}>
+            onMouseLeave={() => setDropdown(false)}
+          >
+            <Link href="#" className={Styles.navLinks} style={linkStyle("/results")}>
               Results
             </Link>
             {dropdown && (
@@ -130,21 +136,25 @@ export default function Navbar() {
           </li>
 
           <li className={Styles.navItem}>
-            <Link href='/letter-to-you' className={Styles.navLinks} style={linkStyle('/letter-to-you')}>
+            <Link
+              href="/letter-to-you"
+              className={Styles.navLinks}
+              style={linkStyle("/letter-to-you")}
+            >
               Letter to you
             </Link>
           </li>
 
           {/* ELECTIONS */}
           <li className={Styles.navItem}>
-            <Link href='/elections' className={Styles.navLinks} style={linkStyle('/elections')}>
+            <Link href="/elections" className={Styles.navLinks} style={linkStyle("/elections")}>
               Elections
             </Link>
           </li>
 
           {/* NOMINATIONS */}
           <li className={Styles.navItem}>
-            <Link href='/nominations' className={Styles.navLinks} style={linkStyle('/nominations')}>
+            <Link href="/nominations" className={Styles.navLinks} style={linkStyle("/nominations")}>
               Nominations
             </Link>
           </li>
@@ -162,14 +172,14 @@ export default function Navbar() {
 
           {/* CONTACTS */}
           <li className={Styles.navItem}>
-            <Link href='/contacts' className={Styles.navLinks} style={linkStyle('/contacts')}>
+            <Link href="/contacts" className={Styles.navLinks} style={linkStyle("/contacts")}>
               Contacts
             </Link>
           </li>
 
           {/* FAQs */}
           <li className={Styles.navItem}>
-            <Link href='/faq' className={Styles.navLinks} style={linkStyle('/faq')}>
+            <Link href="/faq" className={Styles.navLinks} style={linkStyle("/faq")}>
               FAQ
             </Link>
           </li>

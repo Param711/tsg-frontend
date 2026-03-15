@@ -1,5 +1,6 @@
 "use client";
 import Layout from "../../components/Layouts/Layout";
+import Styles from "../../styles/views/faq.module.css";
 import {
   DropdownSelector,
   faqDropdownList,
@@ -10,7 +11,7 @@ export default function FA() {
 
   return (
     <Layout>
-      <section>
+      <section className={Styles.maincontainer}>
         <p className="pageHeading">FAQs</p> {/* Global CSS */}
         <DropdownSelector
           itemList={faqDropdownList}

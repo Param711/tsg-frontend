@@ -35,6 +35,8 @@ export default function Dashboard() {
               className="admin-pic"
               src="/data/media/images/general/gymkhanaLogo.png"
               alt="profile-pic"
+              width={100}
+              height={100}
             />
           </div>
           <div className="admin-info">

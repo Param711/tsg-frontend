@@ -12,7 +12,7 @@ const inputTypes = {
     const inputId = `${props.name}-input`;
     return (
       <>
-        <input type='text' id={inputId} className='form-input' {...props} />
+        <input type="text" id={inputId} className="form-input" {...props} />
       </>
     );
   },
@@ -20,7 +20,7 @@ const inputTypes = {
     const inputId = `${props.name}-input`;
     return (
       <>
-        <input type='email' id={inputId} className='form-input' {...props} />
+        <input type="email" id={inputId} className="form-input" {...props} />
       </>
     );
   },
@@ -28,7 +28,7 @@ const inputTypes = {
     const inputId = `${props.name}-input`;
     return (
       <>
-        <input type='tel' id={inputId} className='form-input' {...props} />
+        <input type="tel" id={inputId} className="form-input" {...props} />
       </>
     );
   },
@@ -36,7 +36,7 @@ const inputTypes = {
     const inputId = `${props.name}-input`;
     return (
       <>
-        <textarea id={inputId} className='form-textarea' {...props} />
+        <textarea id={inputId} className="form-textarea" {...props} />
       </>
     );
   },
@@ -44,27 +44,27 @@ const inputTypes = {
     const inputId = `${props.name}-input`;
     return (
       <>
-        <input type='date' id={inputId} className='form-input' {...props} />
+        <input type="date" id={inputId} className="form-input" {...props} />
       </>
     );
   },
   checkbox: ({ options = [], name, value = [], onChange, required }) => (
-    <ul className='form-options-list'>
+    <ul className="form-options-list">
       {options.map((opt, idx) => {
         const inputId = `${name}-${idx}`;
         return (
-          <li key={idx} className='form-option-item'>
+          <li key={idx} className="form-option-item">
             <input
               id={inputId}
-              type='checkbox'
+              type="checkbox"
               name={name}
               value={opt}
               checked={value.includes(opt)}
               onChange={onChange}
               required={required && value.length === 0}
-              className='form-checkbox'
+              className="form-checkbox"
             />
-            <label htmlFor={inputId} className='form-option-label'>
+            <label htmlFor={inputId} className="form-option-label">
               {opt}
             </label>
           </li>
@@ -73,22 +73,22 @@ const inputTypes = {
     </ul>
   ),
   radio: ({ options = [], name, value, onChange, required }) => (
-    <ul className='form-options-list'>
+    <ul className="form-options-list">
       {options.map((opt, idx) => {
         const inputId = `${name}-${idx}`;
         return (
-          <li key={idx} className='form-option-item'>
+          <li key={idx} className="form-option-item">
             <input
               id={inputId}
-              type='radio'
+              type="radio"
               name={name}
               value={opt}
               checked={value === opt}
               onChange={onChange}
               required={required && idx === 0}
-              className='form-radio'
+              className="form-radio"
             />
-            <label htmlFor={inputId} className='form-option-label'>
+            <label htmlFor={inputId} className="form-option-label">
               {opt}
             </label>
           </li>
@@ -183,7 +183,7 @@ const PostFormPage = () => {
   if (loading)
     return (
       <Layout>
-        <div className='loading-message' style={{ marginTop: "5rem" }}>
+        <div className="loading-message" style={{ marginTop: "5rem" }}>
           Loading...
         </div>
       </Layout>
@@ -191,7 +191,7 @@ const PostFormPage = () => {
   if (!post)
     return (
       <Layout>
-        <div className='error-message' style={{ marginTop: "5rem" }}>
+        <div className="error-message" style={{ marginTop: "5rem" }}>
           Post not found.
         </div>
       </Layout>
@@ -199,7 +199,7 @@ const PostFormPage = () => {
   if (!post.form_structure)
     return (
       <Layout>
-        <div className='error-message' style={{ marginTop: "5rem" }}>
+        <div className="error-message" style={{ marginTop: "5rem" }}>
           No form available for this post.
         </div>
       </Layout>
@@ -207,10 +207,10 @@ const PostFormPage = () => {
   if (submitted)
     return (
       <Layout>
-        <div className='success-message' style={{ marginTop: "5rem" }}>
+        <div className="success-message" style={{ marginTop: "5rem" }}>
           Form submitted successfully!
         </div>
-        <div style={{ display: 'flex', justifyContent: 'center', marginTop: '2rem' }}>
+        <div style={{ display: "flex", justifyContent: "center", marginTop: "2rem" }}>
           <button
             type="button"
             className="form-submit-button"
@@ -225,25 +225,34 @@ const PostFormPage = () => {
 
   return (
     <Layout>
-      <div className='form-container' style={{ marginTop: "5rem" }}>
-        <div className='form-header'>
-          <AppImage src={post.society_logo} alt={post.society_name} className='form-logo' />
+      <div className="form-container" style={{ marginTop: "5rem" }}>
+        <div className="form-header">
+          <AppImage
+            src={post.society_logo}
+            alt={post.society_name}
+            className="form-logo"
+            width={48}
+            height={48}
+          />
           <div>
-            <div className='form-society-name'>{post.society_name}</div>
-            <div className='form-title'>{post.title}</div>
+            <div className="form-society-name">{post.society_name}</div>
+            <div className="form-title">{post.title}</div>
           </div>
         </div>
-        <div className='form-description'>{post.description}</div>
-        <form onSubmit={handleSubmit} className='form'>
+        <div className="form-description">{post.description}</div>
+        <form onSubmit={handleSubmit} className="form">
           {formFields.map((field, idx) => (
-            <div key={idx} className='form-field'>
+            <div key={idx} className="form-field">
               <label
-                className='form-label'
+                className="form-label"
                 htmlFor={
-                  field.input_type === "checkbox" || field.input_type === "radio" ? undefined : `${field.label}-input`
-                }>
+                  field.input_type === "checkbox" || field.input_type === "radio"
+                    ? undefined
+                    : `${field.label}-input`
+                }
+              >
                 {field.label}
-                {field.required && <span className='form-required'>*</span>}
+                {field.required && <span className="form-required">*</span>}
               </label>
               {inputTypes[field.input_type] &&
                 inputTypes[field.input_type]({
@@ -255,7 +264,7 @@ const PostFormPage = () => {
                 })}
             </div>
           ))}
-          <button type='submit' className='form-submit-button'>
+          <button type="submit" className="form-submit-button">
             Submit
           </button>
         </form>

@@ -6,13 +6,13 @@ const SocietyForm = () => {
   const [formData, setFormData] = useState({
     name: "",
     description: "",
-    poc: ["", "", ""], 
+    poc: ["", "", ""],
     activeMembers: "",
     formLink: "",
   });
   const [profilePicture, setProfilePicture] = useState(null);
   const [coverPicture, setCoverPicture] = useState(null);
-  const [photoGallery, setPhotoGallery] = useState([]); 
+  const [photoGallery, setPhotoGallery] = useState([]);
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     if (name.startsWith("poc")) {
@@ -160,30 +160,15 @@ const SocietyForm = () => {
         </div>
         <div>
           <label>Profile Picture:</label>
-          <input
-            type="file"
-            name="profilePicture"
-            onChange={handleFileChange}
-            required
-          />
+          <input type="file" name="profilePicture" onChange={handleFileChange} required />
         </div>
         <div>
           <label>Cover Picture:</label>
-          <input
-            type="file"
-            name="coverPicture"
-            onChange={handleFileChange}
-            required
-          />
+          <input type="file" name="coverPicture" onChange={handleFileChange} required />
         </div>
         <div>
           <label>Photo Gallery:</label>
-          <input
-            type="file"
-            name="photoGallery"
-            onChange={handleFileChange}
-            multiple
-          />
+          <input type="file" name="photoGallery" onChange={handleFileChange} multiple />
         </div>
 
         {/* Display photo previews */}
@@ -194,6 +179,8 @@ const SocietyForm = () => {
                 src={URL.createObjectURL(file)}
                 alt={`Preview ${index}`}
                 className="photo-thumbnail"
+                width={150}
+                height={150}
               />
               <button
                 type="button"

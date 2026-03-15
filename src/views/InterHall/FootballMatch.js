@@ -22,7 +22,7 @@ function FootballMatch({ data }) {
             {data.team1_score}
           </div>
           <div className={Styles.scorers}>
-            <AppImage alt="" src='/images/soccer-ball.png' />
+            <AppImage alt="" src='/images/soccer-ball.png' width={20} height={20} />
             {data.team1_goalscorers}
           </div>
         </div>
@@ -37,7 +37,7 @@ function FootballMatch({ data }) {
             {data.team2_score}
           </div>
           <div className={Styles.scorers}>
-            <AppImage alt="" src='/images/soccer-ball.png' />
+            <AppImage alt="" src='/images/soccer-ball.png' width={20} height={20} />
             {data.team2_goalscorers}
           </div>
         </div>

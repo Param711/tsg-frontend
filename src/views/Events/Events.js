@@ -69,7 +69,7 @@ export default function Events() {
 
         <h2 className={Styles.categoryHeading1}>Recent Events</h2>
 
-        <section className="m-content">
+        <section className={Styles.sliderSection}>
           <section className={Styles.eventSlider}>
             <AutoplaySlider play={true} interval={5000}>
               <div

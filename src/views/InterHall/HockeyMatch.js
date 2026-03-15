@@ -22,7 +22,7 @@ function HockeyMatch({ data }) {
             {data.team1_score}
           </div>
           <div className={Styles.scorers}>
-            <AppImage alt="" src='/images/hockey-symbol.png' />
+            <AppImage alt="" src='/images/hockey-symbol.png' width={20} height={20} />
             {data.team1_goalscorers}
           </div>
         </div>
@@ -37,7 +37,7 @@ function HockeyMatch({ data }) {
             {data.team2_score}
           </div>
           <div className={Styles.scorers}>
-            <AppImage alt="" src='/images/hockey-symbol.png' />
+            <AppImage alt="" src='/images/hockey-symbol.png' width={20} height={20} />
             {data.team2_goalscorers}
           </div>
         </div>

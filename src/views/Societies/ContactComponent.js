@@ -10,7 +10,7 @@ export default function ContactComponent(props) {
           <AppImage alt="" className={Styles.img}
             src={
               "https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?cs=srgb&dl=pexels-simon-robben-55958-614810.jpg&fm=jpg"}
-          ></AppImage>
+          width={200} height={200}></AppImage>
           <span className={Styles.span}>Governor</span>
           <div className={Styles.div}>
             <a href={""} className={Styles.Link} target="_blank">
@@ -29,7 +29,7 @@ export default function ContactComponent(props) {
           <AppImage alt="" className={Styles.img}
             src={
               "https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?cs=srgb&dl=pexels-simon-robben-55958-614810.jpg&fm=jpg"}
-          ></AppImage>
+          width={200} height={200}></AppImage>
           <span className={Styles.span}>Governor</span>
           <div className={Styles.div}>
             <a href={""} className={Styles.Link} target="_blank">
@@ -48,7 +48,7 @@ export default function ContactComponent(props) {
           <AppImage alt="" className={Styles.img}
             src={
               "https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?cs=srgb&dl=pexels-simon-robben-55958-614810.jpg&fm=jpg"}
-          ></AppImage>
+          width={200} height={200}></AppImage>
           <span className={Styles.span}>Governor</span>
           <div className={Styles.div}>
             <a href={""} className={Styles.Link} target="_blank">

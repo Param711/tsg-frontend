@@ -34,7 +34,9 @@ const EventsSection = () => {
           limit: pagination.limit.toString(),
         });
 
-        const response = await fetch(`${BASE_URL}/societies/${encodeURIComponent(society_slug)}/events?${queryParams}`);
+        const response = await fetch(
+          `${BASE_URL}/societies/${encodeURIComponent(society_slug)}/events?${queryParams}`,
+        );
         const data = await response.json();
 
         if (isLoadMore) {
@@ -51,18 +53,19 @@ const EventsSection = () => {
         setLoading(false);
       }
     },
-    [loading, pagination.limit, society_slug]
+    [loading, pagination.limit, society_slug],
   );
 
   useEffect(() => {
     fetchEvents(1, false);
-// eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [society_slug]);
 
   useEffect(() => {
     const handleScroll = () => {
       if (
-        window.innerHeight + document.documentElement.scrollTop >= document.documentElement.offsetHeight - 1000 &&
+        window.innerHeight + document.documentElement.scrollTop >=
+          document.documentElement.offsetHeight - 1000 &&
         hasMore &&
         !loading
       ) {
@@ -90,7 +93,7 @@ const EventsSection = () => {
     // Small delay to ensure DOM is updated
     const timeoutId = setTimeout(checkOverflow, 100);
     window.addEventListener("resize", checkOverflow);
-    
+
     return () => {
       clearTimeout(timeoutId);
       window.removeEventListener("resize", checkOverflow);
@@ -110,7 +113,7 @@ const EventsSection = () => {
   };
 
   return (
-    <div className='events-container'>
+    <div className="events-container">
       {events.length === 0 && !loading ? (
         <div
           style={{
@@ -119,49 +122,52 @@ const EventsSection = () => {
             fontWeight: "bold",
             textAlign: "center",
             margin: "4rem 0",
-          }}>
+          }}
+        >
           No events available
         </div>
       ) : (
-        <div className='events-list'>
+        <div className="events-list">
           {events.map((event) => (
-            <div key={event.id} className='event-card'>
-              <div className='event-image'>
+            <div key={event.id} className="event-card">
+              <div className="event-image">
                 <AppImage
                   src={
                     event.image_url ||
                     "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjMzMzIi8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxNCIgZmlsbD0iI2ZiYmYyNCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPkV2ZW50PC90ZXh0Pjwvc3ZnPg=="
                   }
                   alt={event.title}
+                  width={300}
+                  height={200}
                   onError={(e) => {
                     e.target.src =
                       "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjMzMzIi8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxNCIgZmlsbD0iI2ZiYmYyNCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPkV2ZW50PC90ZXh0Pjwvc3ZnPg==";
                   }}
                 />
               </div>
-              <div className='event-content'>
-                <h3 className='event-title'>{event.title}</h3>
-                <div className='event-description-wrapper'>
+              <div className="event-content">
+                <h3 className="event-title">{event.title}</h3>
+                <div className="event-description-wrapper">
                   <p
                     ref={(el) => (descriptionRefs.current[event.id] = el)}
-                    className={`event-description ${expandedEvents[event.id] ? 'expanded' : ''}`}
+                    className={`event-description ${expandedEvents[event.id] ? "expanded" : ""}`}
                   >
                     {event.description}
                   </p>
                   {(overflowingEvents[event.id] || expandedEvents[event.id]) && (
                     <button
-                      className={`read-more-button ${expandedEvents[event.id] ? 'expanded' : ''}`}
+                      className={`read-more-button ${expandedEvents[event.id] ? "expanded" : ""}`}
                       onClick={() => toggleExpanded(event.id)}
                     >
-                      {expandedEvents[event.id] ? 'Read Less' : 'Read More'}
-                      <span className='arrow'>▼</span>
+                      {expandedEvents[event.id] ? "Read Less" : "Read More"}
+                      <span className="arrow">▼</span>
                     </button>
                   )}
                 </div>
-                <div className='event-footer'>
-                  <div className='event-period'>
-                    <span className='period-label'>Event Period :</span>
-                    <span className='period-value'>{formatEventPeriod(event.event_date)}</span>
+                <div className="event-footer">
+                  <div className="event-period">
+                    <span className="period-label">Event Period :</span>
+                    <span className="period-value">{formatEventPeriod(event.event_date)}</span>
                   </div>
                 </div>
               </div>
@@ -177,15 +183,17 @@ const EventsSection = () => {
             flexDirection: "column",
             alignItems: "center",
             margin: "2rem 0",
-          }}>
-          <div className='loading-spinner'></div>
+          }}
+        >
+          <div className="loading-spinner"></div>
           <span
             style={{
               color: "#fbbf24",
               fontWeight: "bold",
               fontSize: "1.2rem",
               marginTop: "1rem",
-            }}>
+            }}
+          >
             Loading...
           </span>
         </div>

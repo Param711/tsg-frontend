@@ -66,8 +66,8 @@ const AboutSection = ({ society: propSociety }) => {
   };
   const handleThumbClick = (idx) => setCurrentSlide(idx);
 
-  if (loading) return <div className='about-loading'>Loading...</div>;
-  if (error) return <div className='about-error'>{error}</div>;
+  if (loading) return <div className="about-loading">Loading...</div>;
+  if (error) return <div className="about-error">{error}</div>;
   if (!society) return null;
 
   console.log(society);
@@ -81,57 +81,62 @@ const AboutSection = ({ society: propSociety }) => {
   const socials = society.social_media || {};
 
   return (
-    <div className='content-wrapper'>
-      <div className='about-section'>
+    <div className="content-wrapper">
+      <div className="about-section">
         {/* Hero Section */}
 
         {/* Main Content Grid */}
-        <div className='about-content'>
+        <div className="about-content">
           {/* Description Section */}
-          <div className='about-description-card'>
-            <h3 className='card-title'>About Us</h3>
-            <p className='about-description'>{society.description}</p>
+          <div className="about-description-card">
+            <h3 className="card-title">About Us</h3>
+            <p className="about-description">{society.description}</p>
           </div>
 
           {/* Contact & Website Section */}
-          <div className='about-contact-card'>
-            <h3 className='card-title'>Get In Touch</h3>
-            <div className='contact-grid'>
+          <div className="about-contact-card">
+            <h3 className="card-title">Get In Touch</h3>
+            <div className="contact-grid">
               {contact.email && (
-                <div className='contact-item'>
-                  <FaEnvelope className='contact-icon' />
+                <div className="contact-item">
+                  <FaEnvelope className="contact-icon" />
                   <div>
-                    <span className='contact-label'>Email</span>
-                    <a href={`mailto:${contact.email}`} className='contact-value'>
+                    <span className="contact-label">Email</span>
+                    <a href={`mailto:${contact.email}`} className="contact-value">
                       {contact.email}
                     </a>
                   </div>
                 </div>
               )}
               {contact.mobile && (
-                <div className='contact-item'>
-                  <FaPhone className='contact-icon' />
+                <div className="contact-item">
+                  <FaPhone className="contact-icon" />
                   <div>
-                    <span className='contact-label'>Phone</span>
-                    <a href={`tel:${contact.mobile}`} className='contact-value'>
+                    <span className="contact-label">Phone</span>
+                    <a href={`tel:${contact.mobile}`} className="contact-value">
                       {contact.mobile}
                     </a>
                   </div>
                 </div>
               )}
               {contact.location && (
-                <div className='contact-item'>
-                  <FaMapMarkerAlt className='contact-icon' />
+                <div className="contact-item">
+                  <FaMapMarkerAlt className="contact-icon" />
                   <div>
-                    <span className='contact-label'>Location</span>
-                    <span className='contact-value'>{contact.location}</span>
+                    <span className="contact-label">Location</span>
+                    <span className="contact-value">{contact.location}</span>
                   </div>
                 </div>
               )}
             </div>
             {contact.website && (
-              <div className='website-cta-row'>
-                <a href={contact.website} target='_blank' rel='noopener noreferrer' className='website-cta-btn'>
+              <div className="website-cta-row">
+                <a
+                  href={contact.website}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="website-cta-btn"
+                >
                   <FaGlobe />
                   <span>Visit Website</span>
                 </a>
@@ -142,27 +147,29 @@ const AboutSection = ({ society: propSociety }) => {
 
         {/* Full-width Gallery Slider */}
         {!galleryLoading && gallery.length > 0 && (
-          <div className='about-gallery-slider-full'>
-            <h3 className='gallery-title'>Gallery</h3>
-            <div className='gallery-slider-main'>
-              <button className='gallery-arrow left' onClick={handlePrev} aria-label='Previous'>
+          <div className="about-gallery-slider-full">
+            <h3 className="gallery-title">Gallery</h3>
+            <div className="gallery-slider-main">
+              <button className="gallery-arrow left" onClick={handlePrev} aria-label="Previous">
                 &#8592;
               </button>
-              <div className='gallery-slider-image-wrapper'>
+              <div className="gallery-slider-image-wrapper">
                 <AppImage
                   src={gallery[currentSlide].image_url}
                   alt={gallery[currentSlide].caption || `Gallery ${currentSlide + 1}`}
-                  className='gallery-slider-image'
+                  className="gallery-slider-image"
+                  width={1200}
+                  height={675}
                 />
                 {gallery[currentSlide].caption && (
-                  <div className='gallery-slider-caption'>{gallery[currentSlide].caption}</div>
+                  <div className="gallery-slider-caption">{gallery[currentSlide].caption}</div>
                 )}
               </div>
-              <button className='gallery-arrow right' onClick={handleNext} aria-label='Next'>
+              <button className="gallery-arrow right" onClick={handleNext} aria-label="Next">
                 &#8594;
               </button>
             </div>
-            <div className='gallery-slider-thumbnails'>
+            <div className="gallery-slider-thumbnails">
               {gallery.map((img, idx) => (
                 <AppImage
                   key={img.id || idx}
@@ -170,6 +177,8 @@ const AboutSection = ({ society: propSociety }) => {
                   alt={img.caption || `Gallery ${idx + 1}`}
                   className={`gallery-slider-thumb${idx === currentSlide ? " active" : ""}`}
                   onClick={() => handleThumbClick(idx)}
+                  width={120}
+                  height={80}
                 />
               ))}
             </div>

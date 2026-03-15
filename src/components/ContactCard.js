@@ -1,23 +1,12 @@
 import React from "react";
 import Styles from "../styles/components/contact-card.module.css";
 import CopyToClipboard from "react-copy-to-clipboard";
-import Snackbar from '@material-ui/core/Snackbar';
-import IconButton from '@material-ui/core/IconButton';
-import CloseIcon from '@material-ui/icons/Close';
+import Snackbar from "@material-ui/core/Snackbar";
+import IconButton from "@material-ui/core/IconButton";
+import CloseIcon from "@material-ui/icons/Close";
 import AppImage from "./AppImage";
 
-function ContactCard({
-  name,
-  designation,
-  email,
-  facebook,
-  linkedin,
-  whatsapp,
-  web,
-  imgSrc,
-
-}) {
-
+function ContactCard({ name, designation, email, facebook, linkedin, whatsapp, web, imgSrc }) {
   const [open, setOpen] = React.useState(false);
 
   const handleClick = () => {
@@ -26,7 +15,7 @@ function ContactCard({
   };
 
   const handleClose = (event, reason) => {
-    if (reason === 'clickaway') {
+    if (reason === "clickaway") {
       return;
     }
 
@@ -35,12 +24,12 @@ function ContactCard({
   return (
     <div className={Styles.container}>
       <div className={Styles.imgbox}>
-        <AppImage src={imgSrc} alt={`${name}_image`} />
+        <AppImage src={imgSrc} alt={`${name}_image`} width={200} height={200} />
       </div>
       <ul className={Styles.sociallinks}>
         <li>
           <a href={`${facebook}`} target="_blank" rel="noreferrer">
-            {facebook && facebook.includes('instagram.com') ? (
+            {facebook && facebook.includes("instagram.com") ? (
               <i className="fab fa-instagram"></i>
             ) : (
               <i className="fab fa-facebook-f"></i>
@@ -50,7 +39,7 @@ function ContactCard({
         <li>
           <CopyToClipboard text={`${email}`}>
             <button onClick={handleClick} title="Copy Email Address">
-              <i className="fas fa-envelope" ></i>
+              <i className="fas fa-envelope"></i>
             </button>
           </CopyToClipboard>
         </li>
@@ -59,13 +48,13 @@ function ContactCard({
             <i className="fab fa-linkedin-in"></i>
           </a>
         </li>
-      </ul >
+      </ul>
       <div className={Styles.details}>
         <div>
           <Snackbar
             anchorOrigin={{
-              vertical: 'center',
-              horizontal: 'center',
+              vertical: "center",
+              horizontal: "center",
             }}
             open={open}
             autoHideDuration={2000}

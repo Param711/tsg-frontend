@@ -21,18 +21,25 @@ export default function SocietyLayout() {
       <div className={Styles.parentDiv}>
         <div className={Styles.coverPhotoDiv}>
           {/* <h1 className={Styles.coverPhotoHeading}>180 Degrees Consulting</h1> */}
-          <AppImage alt="" src={background} className={Styles.coverImg}></AppImage>
+          <AppImage
+            alt=""
+            src={background}
+            className={Styles.coverImg}
+            width={1200}
+            height={400}
+          ></AppImage>
         </div>
         <div className={Styles.headDiv}>
           <div className={Styles.headDiv1}>
-            <AppImage alt=""
+            <AppImage
+              alt=""
               src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwun4XIcQgZi91uWOOkVArN5sbsLZgnJEdEg&s"
               className={Styles.headImg}
+              width={100}
+              height={100}
             />
             <div className={Styles.headDiv2}>
-              <h1 className={Styles.headDiv2hHeading}>
-                180 Degrees Consulting
-              </h1>
+              <h1 className={Styles.headDiv2hHeading}>180 Degrees Consulting</h1>
               <div className={Styles.headDiv2InnerDiv}>
                 <span>Technology</span>
                 <Link href="#" className={Styles.headDiv2Link}>
@@ -58,24 +65,22 @@ export default function SocietyLayout() {
         </div>
         {
           <div style={{ display: activeSection === "Description" ? "block" : "none" }}>
-          <Description/>
-          <ImageGalleryComponent  setActiveSection={setActiveSection} />
-          <ContactComponent  setActiveSection={setActiveSection}/>
-          <Resgiteration/>
+            <Description />
+            <ImageGalleryComponent setActiveSection={setActiveSection} />
+            <ContactComponent setActiveSection={setActiveSection} />
+            <Resgiteration />
           </div>
         }
         {
           <div style={{ display: activeSection === "Contacts" ? "block" : "none" }}>
-          <ContactTab/>
+            <ContactTab />
           </div>
         }
         {
           <div style={{ display: activeSection === "Image Gallery" ? "block" : "none" }}>
-           <ImageGalleryTab/>
+            <ImageGalleryTab />
           </div>
         }
-        
-      
       </div>
     </Layout>
   );

@@ -46,8 +46,7 @@ const ProfileHeader = () => {
       fetchSociety();
     }
   }, [society_slug]);
-  const capitalizeWords = (str) =>
-    str.toLowerCase().replace(/\b\w/g, char => char.toUpperCase());
+  const capitalizeWords = (str) => str.toLowerCase().replace(/\b\w/g, (char) => char.toUpperCase());
 
   const handleGoBack = () => {
     router.back();
@@ -55,11 +54,11 @@ const ProfileHeader = () => {
 
   if (loading) {
     return (
-      <div className='header-container'>
-        <div className='header-content'>
-          <div className='header-wrapper'>
-            <div className='loading-container'>
-              <div className='loading-spinner'></div>
+      <div className="header-container">
+        <div className="header-content">
+          <div className="header-wrapper">
+            <div className="loading-container">
+              <div className="loading-spinner"></div>
               <p>Loading society...</p>
             </div>
           </div>
@@ -70,10 +69,10 @@ const ProfileHeader = () => {
 
   if (error || !society) {
     return (
-      <div className='header-container'>
-        <div className='header-content'>
-          <div className='header-wrapper'>
-            <div className='error-container'>
+      <div className="header-container">
+        <div className="header-content">
+          <div className="header-wrapper">
+            <div className="error-container">
               <p>{error || "Society not found."}</p>
             </div>
           </div>
@@ -83,20 +82,26 @@ const ProfileHeader = () => {
   }
 
   return (
-    <div className='header-container'>
+    <div className="header-container">
       {/* Header Content */}
-      <div className='header-content'>
-        <div className='header-wrapper'>
-          <button className='back-button' onClick={handleGoBack} style={{ position: 'absolute', top: 24, left: 24, zIndex: 20 }}>
-            <FaArrowLeft className='back-icon' />
+      <div className="header-content">
+        <div className="header-wrapper">
+          <button
+            className="back-button"
+            onClick={handleGoBack}
+            style={{ position: "absolute", top: 24, left: 24, zIndex: 20 }}
+          >
+            <FaArrowLeft className="back-icon" />
             <span>Back</span>
           </button>
-          <div className='profile-section'>
+          <div className="profile-section">
             {/* Profile Logo */}
-            <div className='profile-logo' style={{ position: "relative", alignSelf: "top" }}>
+            <div className="profile-logo" style={{ position: "relative", alignSelf: "top" }}>
               <AppImage
                 src={society.logo_url}
                 alt={`${society.name} Logo`}
+                width={224}
+                height={224}
                 style={{
                   width: "100%",
                   height: "100%",
@@ -114,8 +119,8 @@ const ProfileHeader = () => {
                 <div style={{ position: "absolute", bottom: "-1px", right: "-1px" }}>
                   <AppImage
                     src={gymkhanaLogo}
-                    alt='Gymkhana'
-                    className='gymkhana-logo-badge'
+                    alt="Gymkhana"
+                    className="gymkhana-logo-badge"
                     style={{
                       width: "36px",
                       height: "36px",
@@ -128,18 +133,18 @@ const ProfileHeader = () => {
                       cursor: "pointer",
                     }}
                   />
-                  <span className='gymkhana-tooltip'>This society is under Gymkhana</span>
+                  <span className="gymkhana-tooltip">This society is under Gymkhana</span>
                 </div>
               )}
             </div>
 
             {/* Profile Info */}
-            <div className='profile-info'>
-              <div className='profile-header-content'>
-                <h1 className='profile-title'>{society.name}</h1>
+            <div className="profile-info">
+              <div className="profile-header-content">
+                <h1 className="profile-title">{society.name}</h1>
                 {society.one_liner && (
                   <blockquote
-                    className='profile-one-liner'
+                    className="profile-one-liner"
                     style={{
                       color: "#fbbf24",
                       fontWeight: 600,
@@ -151,43 +156,65 @@ const ProfileHeader = () => {
                       background: "rgba(251,191,36,0.07)",
                       textAlign: "center",
                       maxWidth: "600px",
-                    }}>
+                    }}
+                  >
                     {society.one_liner}
                   </blockquote>
                 )}
-                <blockquote className='profile-quote'>{society.description}</blockquote>
-                <div className='profile-domain'>
-                  <span className='domain-label'>Category</span>
-                  <span className='domain-value'> : {society.category_name}</span>
+                <blockquote className="profile-quote">{society.description}</blockquote>
+                <div className="profile-domain">
+                  <span className="domain-label">Category</span>
+                  <span className="domain-value"> : {society.category_name}</span>
                 </div>
               </div>
 
-              <div className='profile-social-tags'>
-                <div className='profile-tags'>
-                  <span className='tag'>Active</span>
+              <div className="profile-social-tags">
+                <div className="profile-tags">
+                  <span className="tag">Active</span>
                   {/* Render tags from API response if present */}
                   {Array.isArray(society.tags) &&
                     society.tags.map((tag, idx) => (
-                      <span className='tag' key={idx}>
+                      <span className="tag" key={idx}>
                         {capitalizeWords(tag)}
                       </span>
                     ))}
                 </div>
 
-                <div className='header-social-icons'>
+                <div className="header-social-icons">
                   {society.social_media?.facebook && (
-                    <a href={society.social_media.facebook} target='_blank' rel='noopener noreferrer'>
-                      <FaFacebook style={{ fontSize: "2.8rem" }} className='header-social-icon facebook' />
+                    <a
+                      href={society.social_media.facebook}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <FaFacebook
+                        style={{ fontSize: "2.8rem" }}
+                        className="header-social-icon facebook"
+                      />
                     </a>
                   )}
                   {society.social_media?.instagram && (
-                    <a href={society.social_media.instagram} target='_blank' rel='noopener noreferrer'>
-                      <FaInstagram style={{ fontSize: "2.8rem" }} className='header-social-icon instagram' />
+                    <a
+                      href={society.social_media.instagram}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <FaInstagram
+                        style={{ fontSize: "2.8rem" }}
+                        className="header-social-icon instagram"
+                      />
                     </a>
                   )}
                   {society.social_media?.linkedin && (
-                    <a href={society.social_media.linkedin} target='_blank' rel='noopener noreferrer'>
-                      <FaLinkedin style={{ fontSize: "2.8rem" }} className='header-social-icon linkedin' />
+                    <a
+                      href={society.social_media.linkedin}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <FaLinkedin
+                        style={{ fontSize: "2.8rem" }}
+                        className="header-social-icon linkedin"
+                      />
                     </a>
                   )}
                 </div>

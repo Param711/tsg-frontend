@@ -1,11 +1,11 @@
 /* filepath: d:\gym-web-frontend\src\testComponents\TeamSection.js */
 "use client";
 
-import React, { useEffect, useState } from 'react';
-import { useParams } from 'next/navigation';
-import { FaInstagram, FaLinkedin, FaFacebook } from 'react-icons/fa';
-import './TeamSection.css';
-import { BASE_URL } from '../constants/api';
+import React, { useEffect, useState } from "react";
+import { useParams } from "next/navigation";
+import { FaInstagram, FaLinkedin, FaFacebook } from "react-icons/fa";
+import "./TeamSection.css";
+import { BASE_URL } from "../constants/api";
 import AppImage from "../components/AppImage";
 
 const TeamSection = () => {
@@ -19,13 +19,9 @@ const TeamSection = () => {
     const fetchTeam = async () => {
       setLoading(true);
       try {
-        const res = await fetch(
-          `${BASE_URL}/societies/${society_slug}/team/grouped`
-        );
+        const res = await fetch(`${BASE_URL}/societies/${society_slug}/team/grouped`);
         const data = await res.json();
-        const sorted = [...(data.teamGroups || [])].sort(
-          (a, b) => a.priority - b.priority
-        );
+        const sorted = [...(data.teamGroups || [])].sort((a, b) => a.priority - b.priority);
         setTeamGroups(sorted);
       } catch (err) {
         setTeamGroups([]);
@@ -75,9 +71,11 @@ const TeamSection = () => {
                       src={member.image_url}
                       alt={member.name}
                       className="member-image"
+                      width={300}
+                      height={200}
                       onError={(e) => {
                         e.target.src =
-                          'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjMzMzIi8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvcnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxNCIgZmlsbD0iI2ZiYmYyNCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPkltYWdlPC90ZXh0Pjwvc3ZnPg==';
+                          "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjMzMzIi8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvcnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxNCIgZmlsbD0iI2ZiYmYyNCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPkltYWdlPC90ZXh0Pjwvc3ZnPg==";
                       }}
                     />
                     <div className="social-overlay">

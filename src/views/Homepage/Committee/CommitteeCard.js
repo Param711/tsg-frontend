@@ -11,7 +11,7 @@ export default function CommitteeCard({ data }) {
           <div className={Styles.content}>
             <h2>{data.number}</h2>
             <h3>{data.heading}</h3>
-            <AppImage alt="" src={data.background} />
+            <AppImage alt="" src={data.background} width={320} height={440} />
             {/* <p>{data.description}</p> */}
           </div>
         </div>
