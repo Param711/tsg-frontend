@@ -3,8 +3,8 @@
 .events-container {
   max-width: 1400px;
   margin: 0 auto;
-  padding: 80px 2rem;
-  font-family: 'Inter', sans-serif;
+  padding: 40px 2rem;
+  font-family: 'Montserrat', sans-serif;
   background: #000000;
   color: #FFFFFF;
 }
@@ -90,7 +90,7 @@
   font-weight: 400;
   line-height: 1.8;
   margin: 0;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   overflow: hidden;
   display: -webkit-box;
   -webkit-line-clamp: 4;
@@ -114,7 +114,7 @@
   cursor: pointer;
   padding: 0;
   margin-top: 1rem;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   transition: all 0.3s ease;
   display: inline-flex;
   align-items: center;
@@ -146,7 +146,7 @@
   display: flex;
   align-items: center;
   gap: 0.8rem;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .period-label {
@@ -165,7 +165,7 @@
 
 @media (max-width: 768px) {
   .events-container {
-    padding: 60px 1rem;
+    padding: 40px 2rem;
   }
   
   .event-card {
@@ -176,7 +176,7 @@
   .event-image {
     width: 100%;
     min-width: 0;
-    height: 250px;
+    height: auto;
   }
   
   .event-content {

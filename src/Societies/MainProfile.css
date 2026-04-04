@@ -5,14 +5,14 @@
   min-height: 100vh;
   background-color: #000000;
   color: #FFFFFF;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   overflow-x: hidden;
 }
 
 .content-wrapper {
   max-width: 1400px;
   margin: 0 auto;
-  padding: 80px 2rem;
+  padding: 40px 2rem;
   opacity: 0;
   transform: translateY(30px);
   animation: fadeInUp 0.8s ease forwards;

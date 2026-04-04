@@ -3,8 +3,8 @@
 .posts-container {
   max-width: 1400px;
   margin: 0 auto;
-  padding: 80px 2rem;
-  font-family: 'Inter', sans-serif;
+  padding: 40px 2rem;
+  font-family: 'Montserrat', sans-serif;
   background: #000000;
 }
 
@@ -74,11 +74,12 @@
 
 @media (max-width: 768px) {
   .posts-container {
-    padding: 60px 1rem;
+    padding: 40px 2rem;
   }
 
   .posts-grid {
     column-gap: 15px;
+    margin: 0;
   }
 
   .post-card {
