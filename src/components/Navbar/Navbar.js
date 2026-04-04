@@ -90,10 +90,10 @@ export default function Navbar() {
         <ul className={listClass}>
           <li className={Styles.navItem}>
             <Link
-              href="/"
+              href="/societies"
               className={`${Styles.navLinks} ${isActive("/") ? Styles.acitveLink : ""}`}
             >
-              Home
+              Societies
             </Link>
           </li>
 
