@@ -31,6 +31,7 @@
   margin-top: 15px;
   color: white;
   justify-content: center;
+  align-items: center; /* Center stack horizontally */
   font-family: 'Montserrat', sans-serif;
   white-space: nowrap;
 }
@@ -40,16 +41,16 @@
   font-weight: 400;
   letter-spacing: 0.5px;
   line-height: 1.2;
-  text-align: left;
+  text-align: center;
   color: #a0a0a0;
 }
 
 .textLarge {
-  font-size: 1.65rem;
+  font-size: 2rem;
   font-weight: 700;
   letter-spacing: 1.5px;
   line-height: 0.9;
-  text-align: left;
+  text-align: center;
   color: #ffffff;
 }
 
@@ -57,11 +58,11 @@
 
 @media (max-width: 768px) {
   .textSmall {
-    font-size: 0.65rem;
-    letter-spacing: 3px;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
   }
   .textLarge {
     font-size: 2rem;
-    letter-spacing: 1px;
+    letter-spacing: 1.5px;
   }
 }
