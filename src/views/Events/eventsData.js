@@ -11,7 +11,13 @@ const eventsData = [
         content: [
             `Wellbeing Day 2026 brought together students, faculty, and wellness professionals for a day focused on mental health awareness, stress management, and holistic living. Activities included guided meditation, fitness challenges, art therapy sessions, and talks on building emotional resilience.`,
         ],
-        links: [],
+        links: [
+            {
+                description: "Official Site:",
+                href: "https://swgiitkgp.org/",
+                content: "swgiitkgp.org/",
+            },
+        ],
         dates: [
             {
                 title: "Date",
@@ -36,7 +42,13 @@ const eventsData = [
         content: [
             `Renaissance 2.0, held on February 24, 2026, was a grand cultural event organized under the banner of IIT Kharagpur's Platinum Jubilee. It celebrated the confluence of arts, literature, and heritage through curated performances, panel discussions, art exhibitions, and interactive workshops.`,
         ],
-        links: [],
+        links: [
+            {
+                description: "Press Release:",
+                href: "https://pib.gov.in/PressReleseDetail.aspx?PRID=2008398",
+                content: "pib.gov.in",
+            },
+        ],
         dates: [
             {
                 title: "Date",
@@ -122,7 +134,13 @@ const eventsData = [
             `KDSH 2026 challenged participants to apply data science and machine learning techniques to solve real-world problems. Organized in collaboration with Kshitij, the hackathon attracted teams from top engineering institutions across India.`,
             `Participants worked on curated datasets and problem statements spanning healthcare, finance, climate, and social impact domains, competing for prizes and recognition.`,
         ],
-        links: [],
+        links: [
+            {
+                description: "KDAG Website:",
+                href: "https://kdagiitkgp.com/",
+                content: "kdagiitkgp.com/",
+            },
+        ],
         dates: [
             {
                 title: "Date",
@@ -144,7 +162,13 @@ const eventsData = [
             `The Spic Macay International Convention, scheduled for May 2026 at IIT Kharagpur, is a landmark event bringing together maestros of Indian classical music and dance, heritage craft artists, and cinema legends under one roof.`,
             `Organized as a highlight of the Platinum Jubilee celebrations, the multi-day convention will feature concerts, interactive workshops, filmmaker talks, and heritage walks — all aimed at inspiring the next generation to appreciate and preserve India's rich cultural heritage.`,
         ],
-        links: [],
+        links: [
+            {
+                description: "Official Convention Site:",
+                href: "https://spicmacay.org/",
+                content: "spicmacay.org/",
+            },
+        ],
         dates: [
             {
                 title: "Date",

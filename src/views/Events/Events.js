@@ -1,10 +1,9 @@
 "use client";
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Styles from "./events.module.css";
 import eventsData from "./eventsData";
 import EventCard from "../../components/EventCard/EventCard";
 import Layout from "../../components/Layouts/Layout";
-import host from "../../apiService";
 import AwesomeSlider from "react-awesome-slider";
 import withAutoplay from "react-awesome-slider/dist/autoplay";
 import "react-awesome-slider/dist/styles.css";
@@ -22,28 +21,13 @@ export default function Events() {
   const [eventResults, setEventResults] = useState(null);
   const [image, setImage] = useState(null);
   const [index, setIndex] = useState(null);
-  const [events, setEvents] = useState([]);
-  const [loading, setLoading] = useState(true);
+  const [events, setEvents] = useState(eventsData);
+  const [loading, setLoading] = useState(false);
 
   const handlePosterClick = (videoLink) => {
     window.open(videoLink);
   };
   if (typeof window !== "undefined") document.title = "Events | TSG";
-  useEffect(() => {
-    setLoading(true);
-    fetch(`${host}/events/`)
-      .then((response) => response.json())
-      .then((responseData) => {
-        const apiEvents = responseData.data;
-        setEvents(apiEvents && apiEvents.length > 0 ? apiEvents : eventsData);
-        setLoading(false);
-      })
-      .catch((err) => {
-        console.log("the error is", err);
-        setEvents(eventsData);
-        setLoading(false);
-      });
-  }, []);
 
   return (
     <Layout>
@@ -137,10 +121,10 @@ export default function Events() {
                   imgSrc={event.poster}
                   resultExists={event.resultExists}
                   displayTrue={() => {
-                    setContent(event.content || event.description);
-                    setTitle(event.title);
-                    setImage(event.poster);
-                    setShow(true);
+                    const firstLink = event.links && event.links[0]?.href;
+                    if (firstLink) {
+                      window.open(firstLink, "_blank");
+                    }
                   }}
                   displayResults={() => {
                     setTitle(event.title);

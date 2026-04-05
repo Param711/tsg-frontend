@@ -25,8 +25,8 @@
   min-height: 4.5rem;
   background: #000;
   width: 100%;
-  padding: 0 4rem;
-  /* Reduced padding from 8rem to give more space for text */
+  padding: 0 8rem;
+  /* Balanced layout with 8rem padding */
   margin: auto;
   display: flex;
   justify-content: space-between;
@@ -65,7 +65,7 @@
 
 .logoTextSmall {
   font-size: 0.8rem;
-  font-weight: 700;
+  font-weight: 400;
   letter-spacing: 0.5px;
   line-height: 1.2;
   text-align: left;
@@ -74,7 +74,7 @@
 
 .logoTextLarge {
   font-size: 1.65rem;
-  font-weight: 800;
+  font-weight: 700;
   letter-spacing: 1.5px;
   line-height: 0.9;
   text-align: left;
@@ -144,7 +144,7 @@ ul li span {
   z-index: 1;
   overflow: hidden;
   text-transform: none;
-  font-size: 1.1rem;
+  font-size: 0.95rem;
 }
 
 .navbar li>a::before,
@@ -186,6 +186,56 @@ ul li span {
 
 .results {
   position: relative;
+}
+
+/* New Dropdown System */
+.hasDropdown {
+  position: relative;
+}
+
+.dropdownMenu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #000;
+  min-width: 220px;
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem 0;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-top: none;
+  z-index: 1000;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.dropdownItem {
+  margin: 0;
+  width: 100%;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.dropdownItem:last-child {
+  border-bottom: none;
+}
+
+.dropdownLink {
+  color: #ffffff;
+  padding: 0.8rem 1.5rem !important;
+  font-size: 0.85rem !important;
+  width: 100%;
+  display: block;
+  transition: all 0.2s ease !important;
+  letter-spacing: 0.3px;
+}
+
+.dropdownLink:hover {
+  color: #fed403 !important;
+  padding-left: 1.8rem !important;
+}
+
+/* Remove hover underline for dropdown links as they use color shift */
+.dropdownLink::before {
+  display: none !important;
 }
 
 .announcementBannerScrollable {
