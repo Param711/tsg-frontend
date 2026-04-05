@@ -21,7 +21,7 @@ export default function AboutUs() {
 
   const containerVariants = {
     hidden: { opacity: 0 },
-    visible: { 
+    visible: {
       opacity: 1,
       transition: {
         staggerChildren: 0.2,
@@ -32,29 +32,29 @@ export default function AboutUs() {
 
   const itemVariants = {
     hidden: { opacity: 0, x: -30 },
-    visible: { 
-      opacity: 1, 
+    visible: {
+      opacity: 1,
       x: 0,
-      transition: { type: "spring", stiffness: 150, damping: 15, delay: 0 } 
+      transition: { type: "spring", stiffness: 150, damping: 15, delay: 0 }
     }
   };
 
   const descriptionVariants = (delay) => ({
     hidden: { opacity: 0, y: 15 },
-    visible: { 
-      opacity: 1, 
+    visible: {
+      opacity: 1,
       y: 0,
-      transition: { duration: 0.4, ease: "easeOut", delay } 
+      transition: { duration: 0.4, ease: "easeOut", delay }
     }
   });
 
   const imageVariants = {
     hidden: { opacity: 0, scale: 0.95, x: 30 },
-    visible: { 
-      opacity: 1, 
-      scale: 1, 
+    visible: {
+      opacity: 1,
+      scale: 1,
       x: 0,
-      transition: { duration: 0.5, ease: "circOut", delay: 0 } 
+      transition: { duration: 0.5, ease: "circOut", delay: 0 }
     }
   };
 
@@ -62,17 +62,17 @@ export default function AboutUs() {
     <div className={Styles.container}>
       <div className={Styles.aboutUsSectionWrapper}>
         <div className={Styles.aboutContent}>
-          <motion.h2 
+          <motion.h2
             className={Styles.aboutHeading}
             variants={itemVariants}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.3 }}
           >
-            ABOUT
+            OVERVIEW
           </motion.h2>
 
-          <motion.div 
+          <motion.div
             variants={descriptionVariants(0.1)}
             initial="hidden"
             whileInView="visible"
@@ -83,7 +83,7 @@ export default function AboutUs() {
             </p>
           </motion.div>
 
-          <motion.div 
+          <motion.div
             variants={descriptionVariants(0.15)}
             initial="hidden"
             whileInView="visible"
@@ -94,20 +94,20 @@ export default function AboutUs() {
             </p>
           </motion.div>
 
-          <motion.div 
+          <motion.div
             className={Styles.readConstitution}
             variants={descriptionVariants(0.2)}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.3 }}
           >
-            <a href="/filler-link">Read The Constitution</a>
+            <a href="/data/media/files/Gymkhana Constitution.pdf" target="_blank" rel="noopener noreferrer">Read The Constitution</a>
             <div className={Styles.yellowLine}></div>
           </motion.div>
         </div>
 
-        <motion.div 
-          className={Styles.aboutImageContainer} 
+        <motion.div
+          className={Styles.aboutImageContainer}
           onDoubleClick={handleDoubleClick}
           variants={imageVariants}
           initial="hidden"

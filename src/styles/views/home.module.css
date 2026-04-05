@@ -8,9 +8,9 @@ html {
 .backgroundImage {
   width: 100%;
   height: auto;
-  aspect-ratio: 1600 / 662;
+  aspect-ratio: 1600 / 530;
   position: relative;
-  margin-top: 6rem;
+  margin-top: 7rem;
   overflow: visible;
 }
 
@@ -80,12 +80,13 @@ html {
 .container {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   width: 100%;
-  min-height: 90vh;
   position: relative;
   background-color: black;
+  padding-top: 8rem;
+  padding-bottom: 4rem;
 }
 
 .committeesContainer {
@@ -385,27 +386,35 @@ html {
   .backgroundImage {
     height: 60vh;
     aspect-ratio: unset;
+    margin-top: 9.5rem;
   }
+
   .videoBackground {
     height: 100%;
     object-fit: cover;
   }
+
   .aboutHeading {
     font-size: 4rem;
   }
+
   .aboutDescription {
     font-size: 1.5rem;
   }
+
   .sectionHeading {
     font-size: 3.2rem;
   }
+
   .description {
     font-size: 1.5rem;
   }
+
   .mottoBox {
     font-size: 2rem;
     padding: 1.5rem 2rem;
   }
+
   .montageText {
     font-size: 3rem;
   }
