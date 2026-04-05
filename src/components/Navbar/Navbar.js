@@ -29,10 +29,10 @@ export default function Navbar() {
 
   const menuGroups = {
     societies: [
-      { title: "Social & Cultural", path: "/societies/social-cultural" },
-      { title: "Sports", path: "/societies/sports-games" },
-      { title: "Technology", path: "/societies/technology" },
-      { title: "Welfare", path: "/societies/welfare" },
+      { title: "Social & Cultural", path: "/committees/socult" },
+      { title: "Sports", path: "/committees/sports" },
+      { title: "Technology", path: "/committees/tech" },
+      { title: "Welfare", path: "/committees/welfare" },
     ],
     hallOfFame: [
       { title: "Awards", path: "/awards" },
@@ -89,7 +89,7 @@ export default function Navbar() {
             <NavbarDropdown 
               title="Societies" 
               items={menuGroups.societies} 
-              isActive={pathname.startsWith("/societies")} 
+              isActive={pathname.startsWith("/committees")} 
             />
 
             <li className={Styles.navItem}>
