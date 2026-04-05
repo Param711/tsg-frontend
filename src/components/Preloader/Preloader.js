@@ -37,8 +37,8 @@ export default function Preloader() {
         <AppImage
           src="/data/media/images/general/gymkhanaLogo.png"
           alt="Gymkhana Logo"
-          width={140}
-          height={140}
+          width={200}
+          height={200}
         />
         <div className={Styles.textWrapper}>
           <span className={Styles.textSmall}>TECHNOLOGY STUDENTS&apos;</span>
