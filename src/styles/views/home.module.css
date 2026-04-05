@@ -7,25 +7,44 @@ html {
 
 .backgroundImage {
   width: 100%;
-  height: 100vh;
+  height: auto;
+  aspect-ratio: 1600 / 662;
   position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
+  margin-top: 6rem;
+  overflow: visible;
 }
 
-.videoBackground {
+.backgroundImage::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+  pointer-events: none;
+  z-index: 2;
+}
+
+.videoWrapper {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  overflow: hidden;
   z-index: 1;
+}
+
+.videoBackground {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: auto; /* Allows height to scale naturally with the width */
+  transform: translateY(-50%); /* Keeps the video perfectly centered vertically */
   filter: blur(1px);
-  transform: scale(1.1);
+  /* Removed: object-fit: cover; and transform: scale(1.1); */
 }
 
 .montageText {
@@ -43,7 +62,7 @@ html {
 
 .mottoBox {
   position: absolute;
-  bottom: 4vh;
+  bottom: 0;
   left: 5%;
   background-color: #fed403;
   color: #000;
@@ -52,6 +71,7 @@ html {
   font-style: italic;
   padding: 1.5rem 2.5rem;
   z-index: 10;
+  transform: translateY(50%);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
   font-family: 'Cuprum', sans-serif;
 }
@@ -93,7 +113,10 @@ html {
 .aboutUsSectionWrapper {
   display: flex;
   margin: 0;
-  padding: 4rem 10%;
+  
+  /* Update this line (changed top padding from 4rem to 1.5rem or 0 depending on preference): */
+  padding: 1.5rem 10% 4rem 10%; 
+  
   background-color: transparent;
   color: white;
   width: 100%;
