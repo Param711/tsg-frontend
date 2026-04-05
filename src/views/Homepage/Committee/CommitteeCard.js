@@ -4,7 +4,7 @@ import Link from "next/link";
 import Styles from "./committee-card.module.css";
 import AppImage from "../../../components/AppImage";
 
-export default function CommitteeCard({ data, index }) {
+export default function CommitteeCard({ data, index, societies = [] }) {
   return (
     <Link href={data.route} style={{ textDecoration: "none" }}>
       <div className={`${Styles.card} ${index === 0 ? Styles.firstCard : ''}`}>
@@ -16,18 +16,21 @@ export default function CommitteeCard({ data, index }) {
           <p className={Styles.description}>{data.description}</p>
         </div>
         <div className={Styles.clubList}>
-          {data.clubs.map((club, idx) => (
-            <div key={idx} className={Styles.clubItem}>
-              {club ? (
-                <>
-                  <div className={Styles.clubIcon}></div>
-                  <div className={Styles.clubName}>{club}</div>
-                </>
-              ) : (
-                <div style={{ visibility: "hidden" }}>empty</div> 
-              )}
-            </div>
-          ))}
+          <div className={Styles.clubScrollArea}>
+            {societies.map((soc) => (
+              <div key={soc.shortform} className={Styles.clubItem}>
+                <div className={Styles.clubLogo}>
+                  <AppImage
+                    src={soc.img}
+                    alt={soc.name}
+                    width={28}
+                    height={28}
+                  />
+                </div>
+                <div className={Styles.clubName}>{soc.name}</div>
+              </div>
+            ))}
+          </div>
           <div className={Styles.exploreLink}>
             {data.exploreLine}
           </div>

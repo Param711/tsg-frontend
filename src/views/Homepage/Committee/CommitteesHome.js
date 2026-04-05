@@ -4,6 +4,7 @@ import GenStyles from "../../../styles/views/home.module.css";
 import HomeStyles from "./committees-home.module.css";
 import CommitteeCard from "./CommitteeCard";
 import CardStyles from "./committee-card.module.css";
+import socData from "../../../data/soc";
 
 export default function CommitteesHome() {
   const data = [
@@ -14,11 +15,7 @@ export default function CommitteesHome() {
       route: "/committees/socult",
       background: "/data/media/images/committee/Socult.jpg",
       exploreLine: <>Explore&nbsp;<span className={HomeStyles.exploreSpan}>So-Cult</span></>,
-      clubs: [
-        <><strong>ETDS:</strong> Encore</>,
-        <><strong>TDS:</strong> Pravah</>,
-        <><strong>Spectra</strong></>,
-      ],
+      categoryKey: "Socult",
     },
     {
       heading: "Technology",
@@ -27,11 +24,7 @@ export default function CommitteesHome() {
       route: "/committees/tech",
       background: "/data/media/images/committee/Technology.jpg",
       exploreLine: <>Explore&nbsp;<span className={HomeStyles.exploreSpan}>Tech</span></>,
-      clubs: [
-        <><strong>Business</strong> Club</>,
-        <><strong>Developers&apos;</strong> Society</>,
-        <><strong>Robotix</strong></>,
-      ],
+      categoryKey: "Tech",
     },
     {
       heading: "SPORTS",
@@ -40,11 +33,7 @@ export default function CommitteesHome() {
       route: "/committees/sports",
       background: "/data/media/images/committee/Sports.jpg",
       exploreLine: <>Explore&nbsp;<span className={HomeStyles.exploreSpan}>Sports &amp; Games</span></>,
-      clubs: [
-        <><strong>Technology Adventure</strong> Society</>,
-        <><strong>Chess</strong> Club</>,
-        "",
-      ],
+      categoryKey: "Sports & Games",
     },
     {
       heading: "Welfare",
@@ -53,27 +42,33 @@ export default function CommitteesHome() {
       route: "/committees/welfare",
       background: "/data/media/images/committee/StudentsWelfare.jpg",
       exploreLine: <>Explore&nbsp;<span className={HomeStyles.exploreSpan}>Welfare</span></>,
-      clubs: [
-        <><strong>Student Welfare</strong> Group</>,
-        <><strong>Institute Wellness</strong> Group</>,
-        <><strong>Ambar</strong></>,
-      ],
+      categoryKey: "Welfare",
     },
   ];
 
   return (
     <div className={`${GenStyles.container} ${HomeStyles.container}`}>
       <div className={HomeStyles.innerContainer}>
-        
+
         <div className={HomeStyles.headerRegion}>
           <h4 className={HomeStyles.yellowSubtitle}>The Four Verticals</h4>
           <h2 className={HomeStyles.mainTitle}>Committees</h2>
         </div>
 
         <div className={HomeStyles.gridContainer}>
-          {data.map((item, index) => (
-            <CommitteeCard key={index} data={item} index={index} />
-          ))}
+          {data.map((item, index) => {
+            const societies = (socData.data || []).filter(
+              (s) => s.category === item.categoryKey
+            );
+            return (
+              <CommitteeCard
+                key={index}
+                data={item}
+                index={index}
+                societies={societies}
+              />
+            );
+          })}
         </div>
       </div>
     </div>
