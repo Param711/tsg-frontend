@@ -25,10 +25,10 @@
 .mainTitle {
   color: #666;
   font-size: 5rem;
-  font-weight: 900;
+  font-weight: 700;
   margin: 0;
   text-transform: uppercase;
-  letter-spacing: 2px;
+  letter-spacing: -0.05em;
 }
 
 .gridContainer {

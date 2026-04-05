@@ -1,7 +1,7 @@
 .container {
-  background-color: #000;
-  color: #fff;
-  padding: 5rem 2rem;
+  padding: 4rem 0;
+  background-color: transparent;
+  color: white;
   width: 100%;
 }
 
@@ -20,17 +20,41 @@
 
 .mainTitle {
   font-size: 5rem;
-  font-weight: 900;
+  font-weight: 700;
   color: #666;
   margin: 0;
   text-transform: uppercase;
-  letter-spacing: 2px;
+  letter-spacing: -0.05em;
 }
 
-.imageContainer {
-  margin: 0 auto;
-  max-width: 1000px;
+.councilWrapper {
+  display: flex;
+  gap: 4rem;
   width: 100%;
+  margin: 0;
+  padding: 2rem 10%;
+  align-items: center;
+}
+
+.councilContent {
+  flex: 1;
+  text-align: left;
+  padding-right: 3rem;
+}
+
+.councilDescription {
+  font-size: 1.1rem;
+  color: #ddd;
+  line-height: 1.6;
+  margin: 2rem 0;
+}
+
+.councilDescription p {
+  margin-bottom: 1.5rem;
+}
+
+.councilImageContainer {
+  flex: 1;
 }
 
 .imagePadWhite {
@@ -46,7 +70,7 @@
 
 .buttonContainer {
   text-align: center;
-  margin-top: 4rem;
+  margin-top: 2rem;
 }
 
 .viewAllBtn {
@@ -63,4 +87,15 @@
 .viewAllBtn:hover {
   background-color: #fed403;
   color: #000;
+}
+
+@media (max-width: 1100px) {
+  .councilWrapper {
+    flex-direction: column;
+    gap: 3rem;
+  }
+  .councilContent, .councilImageContainer {
+    flex: 1;
+    width: 100%;
+  }
 }

@@ -205,14 +205,17 @@
     flex-direction: row;
     width: 100%;
   }
+
   .blogCard .meta {
     flex-basis: 40%;
     height: auto;
   }
+
   .blogCard .description {
     flex-basis: 60%;
     padding: 50px;
   }
+
   .blogCard .description:before {
     transform: skewX(-3deg);
     content: "";
@@ -224,14 +227,17 @@
     bottom: 0;
     z-index: -1;
   }
+
   .blogCard.alt {
     flex-direction: row-reverse;
   }
+
   .blogCard.alt .description:before {
     left: inherit;
     right: -10px;
     transform: skew(3deg);
   }
+
   .blogCard .details {
     padding: 30px 45px;
   }

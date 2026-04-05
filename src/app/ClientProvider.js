@@ -9,12 +9,17 @@ export default function ClientProvider({ children }) {
   const pathname = usePathname();
 
   useEffect(() => {
-    AOS.init();
+    AOS.init({
+      duration: 800,
+      once: true,
+      easing: "ease-in-out",
+    });
   }, []);
 
-  // Scroll to top on route change (replaces ScrollToTop component)
+  // Scroll to top and refresh AOS on route change
   useEffect(() => {
     window.scrollTo(0, 0);
+    AOS.refresh();
   }, [pathname]);
 
   return <>{children}</>;

@@ -42,17 +42,21 @@ footer {
   margin-bottom: 0.5rem;
   overflow: hidden;
 }
+
 .imgContainer img {
   height: 100%;
   width: auto;
   object-fit: cover;
 }
+
 .tsgContainer .tsgDescription {
   color: white;
 }
+
 .tsgContainer .tsgDescription .tsgHeading {
   font-size: 1.25rem;
 }
+
 .tsgContainer .tsgDescription .address {
   text-align: center;
   font-size: 1rem;
@@ -125,7 +129,6 @@ footer {
 
 .linksContainer p a:hover {
   color: #f1c40f;
-  font-weight: 500;
 }
 
 .contactSection {
@@ -152,7 +155,6 @@ footer {
 .contactButton {
   width: 50%;
   color: white;
-  transition: 0.2s;
   font-size: 1rem;
   max-width: 100%;
   padding: 1.25rem 1rem;
@@ -168,14 +170,12 @@ footer {
   font-family: "Montserrat", sans-serif;
   border: 2px solid #f1c40f;
   color: #fff;
-  background-image: linear-gradient(45deg, #f1c40f 50%, transparent 50%);
-  background-position: 100%;
-  background-size: 400%;
-  transition: background 300ms ease-in-out;
+  transition: background-color 200ms ease, color 200ms ease;
 }
 
 .contactButton:hover {
-  background-position: 0;
+  background-color: #f1c40f;
+  color: #000;
 }
 
 .copyright {

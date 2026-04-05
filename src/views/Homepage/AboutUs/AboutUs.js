@@ -15,7 +15,7 @@ export default function AboutUs() {
           </p>
 
           <p className={Styles.aboutDescription}>
-            The moto of Technology Students&apos; Gymkhana is <span className={Styles.highlightWhite}>YOGAH KARMASU KAUSALAM</span>, which in English means <span className={Styles.highlightWhite}>&quot;Excellence in action is Yoga&quot;</span>. Our goal is to bring overall development in IITians through cultivating and nurturing their extra-curricular talents.
+            The motto of Technology Students&apos; Gymkhana is <span className={Styles.highlightWhite}>YOGAH KARMASU KAUSALAM</span>, which in English means <span className={Styles.highlightWhite}>&quot;Excellence in action is Yoga&quot;</span>. Our goal is to bring overall development in IITians through cultivating and nurturing their extra-curricular talents.
           </p>
           
           <div className={Styles.readConstitution}>

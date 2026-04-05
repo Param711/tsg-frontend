@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cuprum:wght@400;700&display=swap");
 
 html {
   scroll-behavior: smooth;
@@ -41,7 +42,7 @@ html {
   padding: 1.5rem 2.5rem;
   z-index: 10;
   transform: translateY(50%);
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Cuprum', sans-serif;
 }
 
 .container {
@@ -80,12 +81,11 @@ html {
 
 .aboutUsSectionWrapper {
   display: flex;
-  margin: auto;
-  padding: 4rem 3rem;
+  margin: 0;
+  padding: 4rem 10%;
   background-color: transparent;
   color: white;
-  width: 90%;
-  max-width: 1200px;
+  width: 100%;
   text-align: left;
   gap: 4rem;
   align-items: center;
@@ -107,16 +107,20 @@ html {
 
 .aboutDescription {
   letter-spacing: 0.5px;
-  font-size: 1.25rem;
+  font-size: 1.1rem;
   color: #a0a0a0;
   line-height: 1.6;
   margin-bottom: 1.5rem;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 .highlightWhite {
   color: #ffffff;
   font-weight: 700;
+}
+
+.cuprumMotto {
+  font-family: 'Cuprum', sans-serif !important;
 }
 
 .readConstitution {
@@ -128,7 +132,7 @@ html {
 .readConstitution a {
   color: #fed403;
   font-weight: 700;
-  text-decoration: none;
+  text-decoration: underline;
   font-size: 1.05rem;
   margin-right: 1.5rem;
 }

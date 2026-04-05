@@ -192,7 +192,7 @@
   max-width: 1300px;
 }
 
-.details > .summary {
+.details>.summary {
   padding: 8px;
   padding-left: 2.2rem;
   border: none;
@@ -204,7 +204,7 @@
   transition: all 0.3s;
 }
 
-.details > div {
+.details>div {
   padding: 8px;
   border-bottom: 2px solid #fed403;
   line-height: 2rem;
@@ -228,7 +228,7 @@
   display: none;
 }
 
-.details[open] > .summary:before {
+.details[open]>.summary:before {
   transform: rotate(90deg);
 }
 
@@ -272,12 +272,14 @@
   .mainTitle {
     font-size: 3rem;
   }
+
   .inductionIntro .info {
     padding: 20px;
     border-radius: 8px;
     width: 80%;
     margin: 20px 20px;
   }
+
   .inductionIntro .info p {
     font-size: 20px;
   }
@@ -304,6 +306,7 @@
     color: #fed403;
     margin-bottom: 2rem;
   }
+
   .categoryContainer {
     margin: 2rem 0;
   }

@@ -2,6 +2,7 @@
 * {
   box-sizing: border-box;
 }
+
 .navbarOuter {
   width: 100%;
   position: fixed;
@@ -9,6 +10,7 @@
   top: 0;
   left: 0;
 }
+
 .navbarContainer {
   width: 100%;
   position: fixed;
@@ -17,32 +19,39 @@
   right: 0;
   z-index: 99;
 }
+
 .navbar {
   height: auto;
   min-height: 4.5rem;
   background: #000;
   width: 100%;
-  padding: 0 4rem; /* Reduced padding from 8rem to give more space for text */
+  padding: 0 4rem;
+  /* Reduced padding from 8rem to give more space for text */
   margin: auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
   position: relative;
   z-index: 100;
-  flex-wrap: nowrap; /* Force one line */
+  flex-wrap: nowrap;
+  /* Force one line */
 }
+
 .menuIcon {
   display: none;
 }
+
 .navLogo {
   display: flex;
   align-items: center;
   padding: 1rem;
 }
+
 .navLogo img {
   max-width: 3.5rem;
   max-height: 3.5rem;
 }
+
 .logoText {
   display: flex;
   flex-direction: column;
@@ -50,8 +59,10 @@
   color: white;
   justify-content: center;
   font-family: 'Montserrat', sans-serif;
-  white-space: nowrap; /* Prevent "TECHNOLOGY STUDENTS'" from wrapping */
+  white-space: nowrap;
+  /* Prevent "TECHNOLOGY STUDENTS'" from wrapping */
 }
+
 .logoTextSmall {
   font-size: 0.8rem;
   font-weight: 700;
@@ -60,6 +71,7 @@
   text-align: left;
   color: #a0a0a0;
 }
+
 .logoTextLarge {
   font-size: 1.65rem;
   font-weight: 800;
@@ -68,17 +80,21 @@
   text-align: left;
   color: #ffffff;
 }
+
 .navLogo a {
   text-decoration: none;
   color: white;
   font-size: 1.5rem;
 }
+
 .navLogo a:hover {
   color: #f1c40f;
 }
+
 .navLinks {
   color: white;
 }
+
 .navItem .acitveLink {
   font-size: 1.1rem;
   color: #fed403;
@@ -86,6 +102,7 @@
   font-weight: 500;
   position: relative;
 }
+
 .activeNavbar {
   background-color: rgba(0, 0, 0, 0.2);
   backdrop-filter: blur(2rem);
@@ -93,9 +110,11 @@
   -webkit-backdrop-filter: blur(2rem);
   border-bottom: 1px solid rgba(0, 0, 0, 0.18);
 }
+
 .active {
   background-color: transparent;
 }
+
 ul.navMenu {
   display: flex;
   flex-direction: row;
@@ -103,14 +122,18 @@ ul.navMenu {
   margin-top: auto;
   margin-bottom: auto;
   justify-content: space-between;
-  white-space: nowrap; /* Prevent menu items from wrapping */
+  white-space: nowrap;
+  /* Prevent menu items from wrapping */
 }
+
 li {
   margin-right: 1.5rem;
   display: block;
   list-style: none;
 }
-ul li a, ul li span {
+
+ul li a,
+ul li span {
   padding: 0.5rem 0rem;
   color: white;
   display: inline-block;
@@ -123,7 +146,9 @@ ul li a, ul li span {
   text-transform: none;
   font-size: 1.1rem;
 }
-.navbar li > a::before, .navbar li > span::before {
+
+.navbar li>a::before,
+.navbar li>span::before {
   content: "";
   position: absolute;
   top: 95%;
@@ -134,13 +159,18 @@ ul li a, ul li span {
   transform: translateX(-101%);
   transition: ease-out 0.5s;
 }
-.navbar li > a:hover:before, .navbar li > span:hover:before {
+
+.navbar li>a:hover:before,
+.navbar li>span:hover:before {
   transform: translateX(0);
   z-index: -1;
 }
-.navbar li > a:hover, .navbar li > span:hover {
+
+.navbar li>a:hover,
+.navbar li>span:hover {
   color: white;
 }
+
 .navbar .notifications {
   position: absolute;
   padding: 0.15rem;
@@ -153,7 +183,8 @@ ul li a, ul li span {
   -webkit-backdrop-filter: blur(2rem);
   width: 30vw;
 }
-.results{
+
+.results {
   position: relative;
 }
 
@@ -165,7 +196,7 @@ ul li a, ul li span {
   align-items: center;
   padding: 0.5rem 1rem;
   gap: 12rem;
-  
+
   position: absolute;
   top: 100%;
   left: 0;
@@ -178,49 +209,76 @@ ul li a, ul li span {
 .bannerHidden {
   transform: translateY(calc(-100% - 2px));
 }
+
 .bannerTitle {
   font-size: 1.4rem;
-  font-weight: 400; /* "2026" shouldn't be bold */
+  font-weight: 400;
+  /* "2026" shouldn't be bold */
   color: #000000 !important;
   font-family: 'Montserrat', sans-serif !important;
 }
+
 .bannerTitle strong {
-  font-weight: 700; /* "TSG Elections" should be bold */
+  font-weight: 700;
+  /* "TSG Elections" should be bold */
   color: #000000 !important;
 }
+
 .bannerButtonGroup {
   display: flex;
   gap: 1rem;
 }
+
 .bannerBtn {
-  background-color: #fafa33;
-  border: 1px solid #000;
   font-weight: 700;
   padding: 0.4rem 2rem;
   cursor: pointer;
   transition: all 0.2s ease-out;
   font-size: 0.95rem;
-  color: #000000;
   font-family: 'Montserrat', sans-serif;
-  box-shadow: 3px 3px 0px #000; /* Added hard shadow */
+  border-radius: 0;
 }
-.bannerBtn:hover {
-  background-color: #f2f5ab;
-  box-shadow: none;
-  transform: translate(2px, 2px); /* Click effect */
+
+/* Results Button (Black box with yellow text) */
+.bannerBtn:first-child {
+  background-color: #000;
+  color: #fed403;
+  border: 1px solid #fed403;
+}
+
+.bannerBtn:first-child:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(254, 212, 3, 0.3);
+  filter: brightness(1.1);
+}
+
+/* Details Button (Yellow box with black outline and black text) */
+.bannerBtn:last-child {
+  background-color: #fed403;
+  color: #000;
+  border: 1px solid #000;
+}
+
+.bannerBtn:last-child:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  filter: brightness(1.05);
 }
 
 @media screen and (max-width: 768px) {
   .navLogo a {
     font-size: 2rem;
   }
+
   .navLogo img {
     max-width: 2.25rem;
     max-height: 2.25rem;
   }
+
   .activeNavbar {
     border: none;
   }
+
   .menuIcon {
     color: rgba(255, 255, 255, 0.9);
     display: block;
@@ -232,6 +290,7 @@ ul li a, ul li span {
     align-items: center;
     z-index: 1111;
   }
+
   .navMenu.active {
     padding: 10rem 0rem;
     width: 120%;
@@ -244,6 +303,7 @@ ul li a, ul li span {
     transform: scale(1);
     flex-direction: column;
   }
+
   .navMenu {
     display: flex;
     flex-direction: column;
@@ -260,13 +320,16 @@ ul li a, ul li span {
     transition: all 1s ease-out;
   }
 }
+
 @media screen and (max-width: 960px) and (min-width: 768px) {
   .navLinks {
     font-size: 1rem;
   }
+
   .navLogo a {
     font-size: 1.25rem;
   }
+
   .navLogo img {
     max-width: 1.5rem;
     max-height: 1.5rem;
