@@ -10,18 +10,18 @@ export default function Preloader() {
   useEffect(() => {
     // Disable scrolling when preloader is active
     document.body.style.overflow = "hidden";
-    
-    // Start fading out at 1.5 seconds
+
+    // Start fading out at 0.5 seconds
     const timer = setTimeout(() => {
       setFade(true);
-    }, 1500);
-    
-    // Completely unmount after fade transition completes
+    }, 500);
+
+    // Completely unmount after fade transition completes (500ms display + 400ms fade)
     const removeTimer = setTimeout(() => {
       setLoading(false);
       document.body.style.overflow = "auto";
-    }, 2000);
-    
+    }, 900);
+
     return () => {
       clearTimeout(timer);
       clearTimeout(removeTimer);
@@ -40,6 +40,10 @@ export default function Preloader() {
           width={140}
           height={140}
         />
+        <div className={Styles.textWrapper}>
+          <span className={Styles.textSmall}>TECHNOLOGY STUDENTS&apos;</span>
+          <span className={Styles.textLarge}>GYMKHANA</span>
+        </div>
       </div>
     </div>
   );
