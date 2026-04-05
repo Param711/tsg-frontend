@@ -9,28 +9,16 @@ import useNavbar from "./useNavbar";
 import eventsData from "../../views/Events/eventsData.js";
 import Notification from "./Notification";
 import { useRouter, usePathname } from "next/navigation";
-import ResultsDropdown from "./ResultsDropdown.js";
+import NavbarDropdown from "./NavbarDropdown";
 import AppImage from "../AppImage";
 
 export default function Navbar() {
-  // Custom Hook useNavbar for logic of navbarClass
-  const [dropdown, setDropdown] = useState(false);
   const navbarClass = useNavbar();
   const [click, setClick] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  const [notification, setNotification] = useState({
-    badgeContent: 0,
-    click: false,
-  });
-  const handleClick = () => setClick(!click);
   const highlightEvents = eventsData.filter((event) => event.isHighlight);
-  let listClass;
-  if (click) {
-    listClass = `${Styles.navMenu} ${Styles.active}`;
-  } else {
-    listClass = `${Styles.navMenu}`;
-  }
-
+  
+  const handleClick = () => setClick(!click);
   const router = useRouter();
   const pathname = usePathname();
 
@@ -39,9 +27,28 @@ export default function Navbar() {
     return pathname.startsWith(href);
   };
 
-  useEffect(() => {
-    setNotification({ badgeContent: highlightEvents.length, click: false });
-  }, [highlightEvents.length]);
+  const menuGroups = {
+    societies: [
+      { title: "Social & Cultural", path: "/societies/social-cultural" },
+      { title: "Sports", path: "/societies/sports-games" },
+      { title: "Technology", path: "/societies/technology" },
+      { title: "Welfare", path: "/societies/welfare" },
+    ],
+    hallOfFame: [
+      { title: "Awards", path: "/awards" },
+      { title: "InterIIT/GC Results", path: "/results" },
+    ],
+    governance: [
+      { title: "Council", path: "/contacts" },
+      { title: "Elections", path: "/elections" },
+      { title: "Nominations", path: "/nominations" },
+    ],
+    more: [
+      { title: "Letter To You", path: "/letter-to-you" },
+      { title: "Blogs", path: "https://tsgblog.iitkgp.ac.in/" },
+      { title: "FAQ", path: "/faq" },
+    ],
+  };
 
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 80);
@@ -49,28 +56,15 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Notifcation Click Handlers
-  const handleNotificationClick = () => {
-    if (!notification.click) {
-      setNotification({ badgeContent: 0, click: true });
-    } else {
-      setNotification({ badgeContent: 0, click: false });
-    }
-  };
-  const handleNotiClick = () => {
-    router.push("/events");
-  };
-
   return (
     <>
       <div className={navbarClass}>
         <nav className={Styles.navbar}>
-          {/* Navbar logo */}
           <div className={Styles.navLogo}>
             <Link href="/" style={{ display: "flex", alignItems: "center", textDecoration: "none" }}>
               <AppImage
                 src="/data/media/images/general/gymkhanaLogo.png"
-                alt="KGP_logo"
+                alt="Gymkhana Logo"
                 width={40}
                 height={40}
               />
@@ -81,121 +75,46 @@ export default function Navbar() {
             </Link>
           </div>
 
-          {/* Menu icon on smaller devices */}
-          <div className={Styles.menuIcon} onClick={() => handleClick()}>
+          <div className={Styles.menuIcon} onClick={handleClick}>
             <i className={click ? "fas fa-times" : "fas fa-bars"} suppressHydrationWarning></i>
           </div>
 
-          {/* Navlinks */}
-          <ul className={listClass}>
+          <ul className={click ? `${Styles.navMenu} ${Styles.active}` : Styles.navMenu}>
             <li className={Styles.navItem}>
-              <Link
-                href="/societies"
-                className={`${Styles.navLinks} ${isActive("/") ? Styles.acitveLink : ""}`}
-              >
-                Societies
+              <Link href="/" className={`${Styles.navLinks} ${isActive("/") ? Styles.activeLink : ""}`}>
+                Home
               </Link>
             </li>
 
-            {/* EVENTS */}
+            <NavbarDropdown 
+              title="Societies" 
+              items={menuGroups.societies} 
+              isActive={pathname.startsWith("/societies")} 
+            />
+
             <li className={Styles.navItem}>
-              <Link
-                href="/events"
-                className={`${Styles.navLinks} ${isActive("/events") ? Styles.acitveLink : ""}`}
-              >
+              <Link href="/events" className={`${Styles.navLinks} ${isActive("/events") ? Styles.activeLink : ""}`}>
                 Events
               </Link>
             </li>
 
-            {/* BLOGS */}
-            <li className={Styles.navItem}>
-              {
-                <a href="https://tsgblog.iitkgp.ac.in/" target="_blank" rel="noreferrer">
-                  Blogs
-                </a>
-              }
-            </li>
+            <NavbarDropdown 
+              title="Hall Of Fame" 
+              items={menuGroups.hallOfFame} 
+              isActive={isActive("/awards") || isActive("/results")} 
+            />
 
-            {/* AWARDS */}
-            <li className={Styles.navItem}>
-              <Link
-                href="/awards"
-                className={`${Styles.navLinks} ${isActive("/awards") ? Styles.acitveLink : ""}`}
-              >
-                Awards
-              </Link>
-            </li>
+            <NavbarDropdown 
+              title="Governance" 
+              items={menuGroups.governance} 
+              isActive={isActive("/council") || isActive("/elections") || isActive("/nominations")} 
+            />
 
-            {/* RESULTS */}
-            <li
-              className={`${Styles.navItem} ${Styles.results}`}
-              onMouseEnter={() => setDropdown(true)}
-              onMouseLeave={() => setDropdown(false)}
-            >
-              <Link
-                href="#"
-                className={`${Styles.navLinks} ${isActive("/results") ? Styles.acitveLink : ""}`}
-                style={{ cursor: "default" }}
-              >
-                Results
-              </Link>
-              {dropdown && (
-                <ResultsDropdown
-                  handleClick={() => {
-                    handleClick();
-                  }}
-                />
-              )}
-            </li>
-
-            <li className={Styles.navItem}>
-              <Link
-                href="/letter-to-you"
-                className={`${Styles.navLinks} ${isActive("/letter-to-you") ? Styles.acitveLink : ""}`}
-              >
-                Letter to you
-              </Link>
-            </li>
-
-            {/* ELECTIONS */}
-            <li className={Styles.navItem}>
-              <Link
-                href="/elections"
-                className={`${Styles.navLinks} ${isActive("/elections") ? Styles.acitveLink : ""}`}
-              >
-                Elections
-              </Link>
-            </li>
-
-            {/* NOMINATIONS */}
-            <li className={Styles.navItem}>
-              <Link
-                href="/nominations"
-                className={`${Styles.navLinks} ${isActive("/nominations") ? Styles.acitveLink : ""}`}
-              >
-                Nominations
-              </Link>
-            </li>
-
-            {/* CONTACTS */}
-            <li className={Styles.navItem}>
-              <Link
-                href="/contacts"
-                className={`${Styles.navLinks} ${isActive("/contacts") ? Styles.acitveLink : ""}`}
-              >
-                Contacts
-              </Link>
-            </li>
-
-            {/* FAQs */}
-            <li className={Styles.navItem}>
-              <Link
-                href="/faq"
-                className={`${Styles.navLinks} ${isActive("/faq") ? Styles.acitveLink : ""}`}
-              >
-                FAQ
-              </Link>
-            </li>
+            <NavbarDropdown 
+              title="More" 
+              items={menuGroups.more} 
+              isActive={isActive("/letter-to-you") || isActive("/faq")} 
+            />
           </ul>
         </nav>
 

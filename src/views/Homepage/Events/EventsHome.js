@@ -23,7 +23,7 @@ export default function EventsHome() {
           <div className={Styles.eventTextContainer}>
             <h3 className={Styles.eventTitle}>WELLBEING <br/> DAY</h3>
             <p className={Styles.eventDesc}>
-              Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit, Sed Do Eiusmod Tempor Incididunt Ut Labore Et Dolore Magna Aliqua. Ut Enim Ad.
+              Organised by the Students&apos; Welfare Committee, this day is dedicated to the holistic well-being of the KGP community through mental health workshops and interactive sessions.
             </p>
             <div className={Styles.exploreLink}>
               <span onClick={() => router.push('/events')}>Explore Event</span>
@@ -37,7 +37,7 @@ export default function EventsHome() {
           <div className={`${Styles.eventTextContainer} ${Styles.textLeft}`}>
             <h3 className={Styles.eventTitleRight}>SPRING <br/> FEST &apos;26</h3>
             <p className={Styles.eventDescRight}>
-              Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit, Sed Do Eiusmod Tempor Incididunt Ut Labore Et Dolore Magna Aliqua. Ut Enim Ad.
+              IIT Kharagpur&apos;s annual socio-cultural extravaganza returned with the theme &quot;Ethereal Enigma&quot;, featuring a dazzling lineup of performances, competitions, and workshops.
             </p>
             <div className={Styles.exploreLinkRight}>
               <div className={Styles.yellowLine} />
