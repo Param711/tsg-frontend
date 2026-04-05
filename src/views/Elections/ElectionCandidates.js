@@ -8,7 +8,7 @@ import { candidates, secyPosts, posts } from "../../data/electionsData";
 import ElectionCard from "./ElectionCard";
 
 export default function Elections() {
-  if (typeof window !== "undefined") document.title = "Election Candidates 2025-2026 | TSG";
+  if (typeof window !== "undefined") document.title = "Election Candidates 2026-2027 | TSG";
   const [post, setPost] = useState("VP");
   const [secyPost, setSecyPost] = useState("Football");
 

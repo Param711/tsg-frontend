@@ -1,127 +1,212 @@
-/* ── Page Container ────────────────────────────── */
-.pageContainer {
-  width: min(100%, 1200px);
-  margin: 1.5rem auto 0;
-  padding: 4rem 1rem 3rem;
-  min-height: 80vh;
-}
+/* ═══════════════════════════════════════════════
+   Elections Page — Premium Dark Theme
+   ═══════════════════════════════════════════════ */
 
-/* ── Header ──────────────────────────────────── */
-.headerRegion {
+/* ── Hero Section ───────────────────────────── */
+.hero {
+  position: relative;
+  width: 100%;
+  min-height: 420px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   text-align: center;
-  margin-bottom: 2rem;
-  animation: fadeDown 0.6s ease both;
+  padding: 17rem 1.5rem 4rem;
+  overflow: hidden;
+  background: linear-gradient(to bottom,
+      rgba(10, 10, 10, 0.55) 0%,
+      rgba(10, 10, 10, 0.7) 60%,
+      #0a0a0a 100%),
+    url("/images/display/elections_page.png") center / cover no-repeat;
 }
 
-.yellowSubtitle {
-  color: #fed403;
-  font-size: 1.25rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 1px;
+/* Pyramidal / triangular decorative shape */
+.heroPyramid {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 360px solid transparent;
+  border-right: 360px solid transparent;
+  border-bottom: 320px solid rgba(255, 255, 255, 0.03);
+  pointer-events: none;
+  z-index: 0;
 }
 
-.mainTitle {
-  color: #666;
-  font-size: 4.5rem;
-  font-weight: 900;
-  margin: 0;
-  text-transform: uppercase;
-  letter-spacing: 2px;
+/* Subtle pillar-like vertical lines */
+.hero::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 720px;
+  height: 160px;
+  background: repeating-linear-gradient(90deg,
+      rgba(255, 255, 255, 0.04) 0px,
+      rgba(255, 255, 255, 0.04) 3px,
+      transparent 3px,
+      transparent 28px);
+  mask-image: linear-gradient(to top, rgba(0, 0, 0, 0.5), transparent);
+  -webkit-mask-image: linear-gradient(to top, rgba(0, 0, 0, 0.5), transparent);
+  pointer-events: none;
+  z-index: 0;
 }
 
-/* ── Body Content ────────────────────────────── */
-.electionBody {
-  margin: 3rem auto;
-  max-width: 900px;
-  animation: fadeUp 0.6s ease 0.15s both;
-}
-
-.introText {
-  color: rgba(255, 255, 255, 0.7) !important;
-  font-family: "Montserrat", sans-serif !important;
-  font-size: 1.1rem !important;
-  line-height: 1.6 !important;
-  margin-bottom: 1.5rem !important;
-  text-align: center;
-}
-
-.detailsBox {
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 8px;
-  padding: 2rem;
-  margin: 2rem auto;
-  max-width: 700px;
-  text-align: center;
-}
-
-.detailsBox p {
-  color: rgba(255, 255, 255, 0.85);
+.heroBadge {
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+  padding: 0.35rem 1.2rem;
+  background: #FFD402;
+  color: #000;
   font-family: "Montserrat", sans-serif;
-  margin: 0.5rem 0;
-  font-size: 1.05rem;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  margin-bottom: 1.2rem;
 }
 
-.detailsBox b {
-  color: #f1c40f;
+.heroTitle {
+  position: relative;
+  z-index: 1;
+  font-family: "Montserrat", sans-serif;
+  font-size: 5rem;
+  font-weight: 900;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  line-height: 1.05;
+  margin: 0 0 1.2rem;
+}
+
+.heroTitle span {
+  color: #FFD402;
+}
+
+.heroSubtitle {
+  position: relative;
+  z-index: 1;
+  max-width: 520px;
+  color: rgba(255, 255, 255, 0.55);
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.92rem;
+  line-height: 1.65;
+  margin: 0;
+}
+
+/* ── Details Box (inside hero) ───────────────── */
+.detailsBox {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2.5rem;
+  flex-wrap: wrap;
+  margin-top: 2.5rem;
+  padding: 1.2rem 2.5rem;
+  background: rgba(30, 30, 30, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.infoItem {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.infoIcon {
+  color: #FFD402;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+}
+
+.infoLabel {
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.4);
+  margin-bottom: 2px;
+}
+
+.infoValue {
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.85rem;
   font-weight: 600;
+  color: #fff;
 }
 
-.noteText {
-  font-size: 0.95rem !important;
-  color: rgba(255, 255, 255, 0.5) !important;
-  font-style: italic;
-  margin-top: 1rem !important;
+/* ── Content Area ───────────────────────────── */
+.contentArea {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem;
+}
+
+/* ── Main Content ────────────────────────────── */
+.mainContent {
+  width: 100%;
+}
+
+/* ── Main Content ────────────────────────────── */
+.mainContent {
+  width: 100%;
 }
 
 .sectionTitle {
-  text-align: center;
-  color: #f1c40f !important;
-  font-family: "Montserrat", sans-serif !important;
-  font-weight: 600 !important;
-  margin-bottom: 1.5rem !important;
+  font-family: "Montserrat", sans-serif;
+  font-size: 2.4rem;
+  font-weight: 900;
   text-transform: uppercase;
-  letter-spacing: 1.5px;
+  letter-spacing: 2px;
+  color: #fff;
+  margin: 0 0 0.5rem;
 }
 
-/* ── Notices & Buttons ───────────────────────── */
-.notices {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  align-items: center;
+.sectionTitle span {
+  color: #FFD402;
 }
 
-.notice {
-  width: 100%;
-  max-width: 700px;
+.sectionSubtitle {
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.88rem;
+  color: rgba(255, 255, 255, 0.45);
+  line-height: 1.6;
+  margin: 0 0 2.5rem;
+  max-width: 550px;
+}
+
+/* ── Notice Row ──────────────────────────────── */
+.noticeCard {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1.25rem 2rem;
-  background: rgba(255, 255, 255, 0.02);
-  border: 1px solid rgba(241, 196, 15, 0.2);
-  border-left: 4px solid #f1c40f;
-  border-radius: 4px;
+  padding: 1.5rem 2rem;
+  border: 1px solid rgba(241, 196, 15, 0.35);
+  margin-bottom: 1.2rem;
   transition: all 0.3s ease;
 }
 
-.notice:hover {
-  background: rgba(241, 196, 15, 0.05);
-  border-color: rgba(241, 196, 15, 0.4);
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+.noticeCard:hover {
+  background: rgba(241, 196, 15, 0.04);
+  border-color: rgba(241, 196, 15, 0.6);
 }
 
 .noticeDescription {
   color: rgba(255, 255, 255, 0.9);
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
-  font-size: 1.05rem;
+  font-size: 1.1rem;
 }
 
-/* Base button styles used for relevant docs and notices alike */
 .goldButton {
   display: inline-flex;
   align-items: center;
@@ -131,10 +216,9 @@
   color: #f1c40f;
   font-family: "Montserrat", sans-serif;
   font-weight: 600;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   text-decoration: none;
   border: 1px solid #f1c40f;
-  border-radius: 4px;
   transition: all 0.2s ease;
   white-space: nowrap;
 }
@@ -144,41 +228,53 @@
   color: #000;
 }
 
-.buttonGroup {
+/* ── Relevant Documents Section ──────────────── */
+.docsSection {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.docsTitle {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #fff;
+  margin: 0 0 1.5rem;
+}
+
+.docsTitle span {
+  color: #FFD402;
+}
+
+.docsGrid {
   display: flex;
-  justify-content: center;
   gap: 1rem;
   flex-wrap: wrap;
-  margin-top: 1.5rem;
 }
 
-/* ── Legacy Post Selector for candidates page ── */
-.postSelector {
-  margin-top: 2rem;
-  display: flex;
-  flex-direction: column;
+.docButton {
+  display: inline-flex;
   align-items: center;
-  justify-content: center;
+  gap: 6px;
+  padding: 0.6rem 1.2rem;
+  background: transparent;
+  color: #FFD402;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 0.78rem;
+  text-decoration: none;
+  border: 1px solid #FFD402;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  transition: all 0.2s ease;
 }
 
-.selectButton {
-  font-size: 1.25rem;
-  border: none;
-  background: #eee;
-  color: black;
-  padding: 1rem;
-  border-radius: 5px;
-  background-color: #ddd;
-  max-width: 60%;
-  margin: auto;
-}
-
-.candidateContainer {
-  margin-top: 2rem;
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-  flex-wrap: wrap;
+.docButton:hover {
+  background: #FFD402;
+  color: #000;
 }
 
 /* ── Keyframes ───────────────────────────────── */
@@ -206,27 +302,49 @@
   }
 }
 
+.hero {
+  animation: fadeDown 0.6s ease both;
+}
+
+.contentArea {
+  animation: fadeUp 0.6s ease 0.15s both;
+}
+
 /* ── Responsive ──────────────────────────────── */
-@media screen and (max-width: 768px) {
-  .mainTitle {
+@media screen and (max-width: 900px) {
+  .contentArea {
+    padding: 2rem 1rem;
+  }
+
+  .detailsBox {
+    gap: 1.5rem;
+    padding: 1rem 1.5rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .heroTitle {
     font-size: 3rem;
   }
 
-  .notice {
+  .sectionTitle {
+    font-size: 1.6rem;
+  }
+
+  .noticeCard {
     flex-direction: column;
     text-align: center;
     gap: 1rem;
-    padding: 1.5rem;
+    padding: 1.2rem;
+  }
+
+  .detailsBox {
+    flex-direction: column;
+    gap: 1rem;
   }
 }
 
-@media screen and (max-width: 480px) {
-  .mainTitle {
-    font-size: 2.5rem;
-  }
-}
-
-/* ── Custom Dropdown ───────────────────────────── */
+/* ── Legacy dropdown styles (kept for candidates page) ── */
 .yearSelectWrapper {
   display: flex;
   justify-content: center;
@@ -318,4 +436,51 @@
 
 .dropdownItemActive {
   background: rgba(255, 212, 2, 0.15);
+}
+
+/* Legacy classes kept for candidates page */
+.pageContainer {
+  width: min(100%, 1200px);
+  margin: 1.5rem auto 0;
+  padding: 4rem 1rem 3rem;
+  min-height: 80vh;
+}
+
+.headerRegion {
+  text-align: center;
+  margin-bottom: 2rem;
+  animation: fadeDown 0.6s ease both;
+}
+
+.yellowSubtitle {
+  color: #fed403;
+  font-size: 1.25rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.mainTitle {
+  color: #666;
+  font-size: 4.5rem;
+  font-weight: 900;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.postSelector {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.candidateContainer {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
 }
