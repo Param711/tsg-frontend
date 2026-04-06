@@ -154,9 +154,11 @@
   .card {
     height: 700px;
   }
+
   .topSection {
     height: 55%;
   }
+
   .clubList {
     height: 45%;
   }
@@ -173,20 +175,25 @@
   .titleWelfare {
     font-size: 4rem;
   }
+
   .description {
     font-size: 1.25rem;
   }
+
   .clubName {
     font-size: 1.4rem;
   }
+
   .clubItem {
     padding: 20px 24px;
     gap: 20px;
   }
+
   .clubLogo {
     width: 50px;
     height: 50px;
   }
+
   .exploreLink {
     font-size: 1.4rem;
     min-height: 60px;

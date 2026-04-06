@@ -101,7 +101,7 @@ export default function AboutUs() {
             whileInView="visible"
             viewport={{ once: true, amount: 0.3 }}
           >
-            <a href="/data/media/files/Gymkhana Constitution.pdf" target="_blank" rel="noopener noreferrer">Read The Constitution</a>
+            <a href="/data/media/files/Gymkhana_Constitution.pdf" target="_blank" rel="noopener noreferrer">Read The Constitution</a>
             <div className={Styles.yellowLine}></div>
           </motion.div>
         </div>

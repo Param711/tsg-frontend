@@ -126,7 +126,7 @@ export default function Navbar() {
           <div className={`${Styles.announcementBannerScrollable}${isScrolled ? ` ${Styles.bannerHidden}` : ''}`}>
             <span className={Styles.bannerTitle}><strong>TSG Elections</strong> 2026</span>
             <div className={Styles.bannerButtonGroup}>
-              <button className={Styles.bannerBtn} onClick={() => router.push('/elections')}>Results</button>
+              <button className={Styles.bannerBtn} onClick={() => window.open('/data/media/files/results.pdf', '_blank')}>Results</button>
               <button className={`${Styles.bannerBtn} ${Styles.hideOnMobile}`} onClick={() => router.push('/elections')}>Details</button>
             </div>
           </div>
