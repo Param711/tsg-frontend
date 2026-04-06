@@ -90,22 +90,10 @@ export default function Home() {
           video.removeEventListener("timeupdate", checkBuffer);
         };
       } else if (video.canPlayType("application/vnd.apple.mpegurl")) {
-        // Native HLS support (iOS Safari)
-        // Critical: Remove existing <source> children — they conflict with setting video.src directly.
-        // Without this, Safari ignores the programmatic src because it's already begun loading from <source> tags.
-        while (video.firstChild) {
-          video.removeChild(video.firstChild);
-        }
-
-        video.src = hlsSource;
-
-        // video.load() is mandatory here to reset Safari's internal media pipeline
-        // so it acknowledges the new src after the prior <source> children stalled it.
-        video.load();
-
-        video.addEventListener("canplay", () => {
-          video.play().catch((e) => console.log("iOS autoplay blocked:", e));
-        }, { once: true });
+        // iOS Safari has native HLS support.
+        // The src attribute is already set in HTML to the .m3u8 file,
+        // so Safari autoplays it via the HTML autoPlay+muted+playsInline chain.
+        // No JS intervention needed — doing nothing is intentional.
       }
     }
   }, []);
@@ -145,16 +133,13 @@ export default function Home() {
           <video
             ref={videoRef}
             className={Styles.videoBackground}
+            src="/videos/hls/playlist.m3u8"
             autoPlay
             loop
             muted
             playsInline
             poster="/videos/hero-bg.webp"
-          >
-            <source src="/videos/hero-bg.webm" type="video/webm" />
-            <source src="/videos/hero-bg.mp4" type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
+          />
         </div>
         <div className={Styles.mottoBox}>&quot;Yogah Karmasu Kausalam&quot;</div>
       </div>
