@@ -9,8 +9,8 @@
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-  <a href="https://github.com/tsg-iitkgp/web-frontend">
-    <img src="https://github-production-user-asset-6210df.s3.amazonaws.com/86282911/293505563-4c4ecabf-bbee-4cc3-86bc-0500f890f867.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA/20231231/us-east-1/s3/aws4_request&X-Amz-Date=20231231T123604Z&X-Amz-Expires=300&X-Amz-Signature=a3645b7ca15972407adbba4131f12f86922a5213688aaacb05db73d6ff60d213&X-Amz-SignedHeaders=host&actor_id=86282911&key_id=0&repo_id=406055266" alt="Logo" width="80" height="80">
+  <a href="https://github.com/tsg-iitkgp/tsg-frontend">
+    <img src="https://gymkhana.iitkgp.ac.in/data/media/images/general/gymkhanaLogo.png" alt="Logo" width="80" height="80">
   </a>
 
 
@@ -19,17 +19,17 @@
   </h3>
 
   <p align="center">
-    <!-- <a href="https://github.com/tsg-iitkgp/web-frontend"><strong>Explore the docs »</strong></a> -->
+    <!-- <a href="https://github.com/tsg-iitkgp/tsg-frontend"><strong>Explore the docs »</strong></a> -->
     <!-- <br /> -->
-    <!-- <a href="https://github.com/tsg-iitkgp/web-frontend">
+    <!-- <a href="https://github.com/tsg-iitkgp/tsg-frontend">
     View Demo
     </a>
     · -->
-    <a href="https://github.com/tsg-iitkgp/web-frontend/issues">
+    <a href="https://github.com/tsg-iitkgp/tsg-frontend/issues">
     Report Bug
     </a>
     ·
-    <a href="https://github.com/tsg-iitkgp/web-frontend/issues">Request Feature</a>
+    <a href="https://github.com/tsg-iitkgp/tsg-frontend/issues">Request Feature</a>
   </p>
 </p>
 
@@ -106,8 +106,8 @@ This project has been built with the following technologies.
 
 ```sh
 # Clone the repository
-git clone https://github.com/tsg-iitkgp/web-frontend.git
-cd web-frontend
+git clone https://github.com/tsg-iitkgp/tsg-frontend.git
+cd tsg-frontend
 
 # Install dependencies
 npm install
@@ -153,8 +153,8 @@ The site will be available at `http://localhost:3000`.
 
 Name|Email|Phone No.
 -----|-----|---------
-[Daksh Yadav](https://github.com/dakshyadav1810) | <dakshyadav.iitkgp@gmail.com> | +91-8795675974
-[Devansh Soni](https://github.com/indenigrate) | <devanshsoni.iitkgp@gmail.com> | +91-7999892181
+[Harsh Raj Dubey](https://github.com/harshrajdubey) | <dubeyharshraj.iitkgp@gmail.com> | +91-9636402605
+[Shubham Krishan](https://github.com/shub-krishan208) | <shubhamkrishan.iitkgp@gmail.com> | +91-7812083803
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -178,15 +178,15 @@ Name|Email|Phone No.
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/tsg-iitkgp/web-frontend.svg?style=for-the-badge
-[contributors-url]: https://github.com/tsg-iitkgp/web-frontend/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/tsg-iitkgp/web-frontend.svg?style=for-the-badge
-[forks-url]: https://github.com/tsg-iitkgp/web-frontend/network/members
-[stars-shield]: https://img.shields.io/github/stars/tsg-iitkgp/web-frontend.svg?style=for-the-badge
-[stars-url]: https://github.com/tsg-iitkgp/web-frontend/stargazers
-[issues-shield]: https://img.shields.io/github/issues/tsg-iitkgp/web-frontend.svg?style=for-the-badge
-[issues-url]: https://github.com/tsg-iitkgp/web-frontend/issues
-[license-shield]: https://img.shields.io/github/license/tsg-iitkgp/web-frontend.svg?style=for-the-badge
-[license-url]: https://github.com/tsg-iitkgp/web-frontend/blob/main/LICENSE
+[contributors-shield]: https://img.shields.io/github/contributors/tsg-iitkgp/tsg-frontend.svg?style=for-the-badge
+[contributors-url]: https://github.com/tsg-iitkgp/tsg-frontend/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/tsg-iitkgp/tsg-frontend.svg?style=for-the-badge
+[forks-url]: https://github.com/tsg-iitkgp/tsg-frontend/network/members
+[stars-shield]: https://img.shields.io/github/stars/tsg-iitkgp/tsg-frontend.svg?style=for-the-badge
+[stars-url]: https://github.com/tsg-iitkgp/tsg-frontend/stargazers
+[issues-shield]: https://img.shields.io/github/issues/tsg-iitkgp/tsg-frontend.svg?style=for-the-badge
+[issues-url]: https://github.com/tsg-iitkgp/tsg-frontend/issues
+[license-shield]: https://img.shields.io/github/license/tsg-iitkgp/tsg-frontend.svg?style=for-the-badge
+[license-url]: https://github.com/tsg-iitkgp/tsg-frontend/blob/main/LICENSE
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/company/technology-students-gymkhana-iit-kharagpur/

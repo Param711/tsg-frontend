@@ -1,4 +1,3 @@
-/* filepath: d:\gym-web-frontend\src\testComponents\EventsSection.js */
 "use client";
 
 import React, { useState, useEffect, useCallback, useRef } from "react";

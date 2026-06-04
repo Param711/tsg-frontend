@@ -1,4 +1,3 @@
-/* filepath: d:\gym-web-frontend\src\testComponents\TeamSection.js */
 "use client";
 
 import React, { useEffect, useState } from "react";

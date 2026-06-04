@@ -140,7 +140,7 @@ export default function Footer() {
       <div>
         <p className={Styles.copyright}>
           &copy; Technology Students&apos; Gymkhana, IIT Kharagpur &diams;{" "}
-          <a href="https://github.com/tsg-iitkgp/web-frontend" target="_blank" rel="noreferrer">
+          <a href="https://github.com/tsg-iitkgp/tsg-frontend" target="_blank" rel="noreferrer">
             Source Code
           </a>
         </p>
