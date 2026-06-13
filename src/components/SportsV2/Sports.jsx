@@ -16,6 +16,7 @@ export default function Sports() {
       
       <Reveal>
         <div className="sports-grid">
+          {/* This loop dynamically generates all the cards! */}
           {sportsData.map((sport) => (
             <div className="sport-card" key={sport.id}>
               <span className="sport-card-icon">{sport.icon}</span>

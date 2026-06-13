@@ -13,6 +13,7 @@ export default function Ticker() {
   return (
     <div className="ticker">
       <div className="ticker-inner">
+        {/* Render twice for the seamless CSS infinite scroll loop */}
         {[...tickerItems, ...tickerItems].map((item, index) => (
           <span className="ticker-item" key={index}>{item}</span>
         ))}

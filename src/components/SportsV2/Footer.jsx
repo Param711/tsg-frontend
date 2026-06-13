@@ -3,7 +3,10 @@ export default function Footer() {
     <footer>
       <div className="footer-top">
         <div className="footer-brand">
-          <div className="footer-logo">IIT KGP SPORTS</div>
+          <div className="footer-logo">
+            <img src="/gymkhanaLogo.png" alt="TSG Logo" style={{ width: '32px', height: '32px', objectFit: 'contain', marginRight: '10px', verticalAlign: 'middle' }} />
+            IIT KGP SPORTS
+          </div>
           <p className="footer-tagline">Promoting sporting excellence since 1952. India's oldest IIT. Largest campus. Strongest spirit.</p>
         </div>
         <div className="footer-links-group">

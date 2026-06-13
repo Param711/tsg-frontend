@@ -7,9 +7,9 @@ export default function Hero() {
 
       <div className="hero-content">
         <div className="hero-tag">Technology Students' Gymkhana</div>
-        <h1 className="hero-title">
-          <span>FORGED</span>
-          <span>ON THE</span>
+        <h1 className="hero-title" style={{ lineHeight: 0.85 }}>
+          FORGED<br/>
+          ON THE<br/>
           <span className="accent">FIELD</span>
         </h1>
         <p className="hero-desc">
